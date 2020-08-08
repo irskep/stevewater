@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="guitarpedal">
     <RandomGuitarPedalWithCopy :seed="seed" />
   </div>
 </template>

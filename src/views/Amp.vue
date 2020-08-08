@@ -1,16 +1,16 @@
 <template>
-  <div class="home">
-    <RandomGuitarPedalWithCopy :seed="seed" />
+  <div class="amp">
+    <RandomGuitarAmpWithCopy :seed="seed" />
   </div>
 </template>
 
 <script>
-import RandomGuitarPedalWithCopy from "@/components/RandomGuitarPedalWithCopy.vue";
+import RandomGuitarAmpWithCopy from "@/components/RandomGuitarAmpWithCopy.vue";
 
 export default {
   name: "Amp",
   components: {
-    RandomGuitarPedalWithCopy
+    RandomGuitarAmpWithCopy
   },
   props: ["seed"]
 };
