@@ -26,12 +26,12 @@ import omniGrammar from "@/improvgrammar/guitarpedal/all";
 //   nameOfMusicianGrammar,
 //   pedalWordsGrammar);
 
-console.log(
-  omniGrammar.desc1.groups[0].phrases.length,
-  omniGrammar.extra.groups[0].phrases.length,
-  omniGrammar.desc1.groups[0].phrases.length *
-    omniGrammar.extra.groups[0].phrases.length
-);
+// console.log(
+//   omniGrammar.desc1.groups[0].phrases.length,
+//   omniGrammar.extra.groups[0].phrases.length,
+//   omniGrammar.desc1.groups[0].phrases.length *
+//     omniGrammar.extra.groups[0].phrases.length
+// );
 
 function dryness() {
   return function(group) {
@@ -39,10 +39,9 @@ function dryness() {
       return 0;
     }
 
-    const self = this;
-    const newPhrases = group.phrases.filter(function(phrase) {
+    const newPhrases = group.phrases.filter(phrase => {
       if (!phrase) return true;
-      return self.history.indexOf(phrase) === -1;
+      return this.history.indexOf(phrase) === -1;
     });
     const newGroup = Object.create(group);
     newGroup.phrases = newPhrases;
