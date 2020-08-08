@@ -1,8 +1,12 @@
 <template>
-  <div id="app">
-    <div id="nav"><router-link to="/">Home</router-link></div>
+  <main id="app">
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link :to="`/amp/${Date.now()}`">Amp</router-link>
+      <router-link :to="`/guitarpedal/${Date.now()}`">Guitar Pedal</router-link>
+    </nav>
     <router-view />
-  </div>
+  </main>
 </template>
 
 <style lang="scss">
@@ -41,10 +45,11 @@ html {
   padding: 0;
 }
 
-main nav {
-  text-align: right;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+main > nav {
+  display: flex;
+  & > * {
+    margin-right: 1rem;
+  }
 }
 
 footer {

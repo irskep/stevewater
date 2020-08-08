@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <RandomGuitarPedalWithCopy :seed="Date.now()" />
+    <RandomGuitarPedalWithCopy :seed="seed" />
   </div>
 </template>
 
@@ -8,9 +8,10 @@
 import RandomGuitarPedalWithCopy from "@/components/RandomGuitarPedalWithCopy.vue";
 
 export default {
-  name: "Home",
+  name: "GuitarPedal",
   components: {
     RandomGuitarPedalWithCopy
-  }
+  },
+  props: ["seed"]
 };
 </script>

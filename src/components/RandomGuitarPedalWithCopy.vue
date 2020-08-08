@@ -1,16 +1,20 @@
 <template>
   <div class="RandomGuitarPedalWithCopy">
-    <RandomGuitarPedal :seed="Date.now()"></RandomGuitarPedal>
+    <RandomGuitarPedal :seed="seed"></RandomGuitarPedal>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Prop, Component, Vue } from "vue-property-decorator";
 import RandomGuitarPedal from "@/components/guitarpedal/RandomGuitarPedal.vue";
 
 @Component({ components: { RandomGuitarPedal } })
 export default class RandomGuitarPedalWithCopy extends Vue {
-  // @Prop() private msg!: string;
+  @Prop() private seed!: string;
+
+  mounted() {
+    console.log(this.seed);
+  }
 }
 </script>
 
