@@ -1,7 +1,7 @@
 <template>
   <div class="SomeControl">
     <div v-if="appearance === 'led'" class="CheckLED">
-      <div v-if="label.trim() !== '&nbsp;'" class="Label">{{ label }}</div>
+      <div v-if="label.trim() !== '&nbsp;'" class="LEDLabel">{{ label }}</div>
       <LED v-bind:randomNumber="randomNumber2"></LED>
     </div>
 
@@ -17,6 +17,10 @@
 <style scoped>
 .SomeControl {
   min-width: 2.4em;
+}
+
+.LEDLabel {
+  font-size: 0.5em;
 }
 </style>
 
@@ -39,14 +43,14 @@ const appearances = [
   "knob",
   "switch",
   "led",
-  "nothing",
+  "nothing"
 ];
 
 export default {
   components: {
     LED,
     Knob,
-    FingerSwitch,
+    FingerSwitch
   },
 
   props: ["label", "randomNumber1", "randomNumber2"],
@@ -54,11 +58,11 @@ export default {
   computed: {
     appearance: function() {
       return choiceItem(this.$props.randomNumber1, appearances);
-    },
+    }
   },
 
   setup() {
     return {};
-  },
+  }
 };
 </script>
