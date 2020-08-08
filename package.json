@@ -6,7 +6,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "gh": "yarn build && gh-pages -d dist",
+    "butler": "yarn build && butler push dist irskep/steves-pedal-shop:dev",
+    "deploy": "yarn gh && yarn butler"
   },
   "dependencies": {
     "alea": "^1.0.0",
