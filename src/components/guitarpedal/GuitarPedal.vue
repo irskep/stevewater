@@ -348,7 +348,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .ThreeSectionStompbox {
   --outsidePadding: 0.4em;
 

@@ -24,6 +24,14 @@ export const textColorMap = {
 
 export const colorKeys: string[] = Object.keys(colorMap).sort();
 
+export const ampPanelColors = ["#a59189", "#dcc39e", "#58341a"];
+
+export const ampPanelTextColors = ["#fff", "#000", "#fff"];
+
+export const ampKnobColors = ["#111", "#d1d8e0"];
+
+export const ampKnobColorsTick = ["#fff", "#111"];
+
 export const knobColors = [
   "#e84118",
   "#ff5A24",
@@ -105,3 +113,137 @@ export const bg2Colors = [
 ];
 
 export const bg2TextColors = ["#fff", "#000", "var(--textOnBg)"];
+
+export const ampInputWords = ["INSTRUMENT", "NORMAL", "VIBRATO"];
+
+export const ampKnobGroupWords = [
+  "LEAD CHANNEL",
+  "RHYTHM CHANNEL",
+  "TREMOLO",
+  "EQ",
+  "POWER",
+  "AMP",
+  "FX",
+  "TONE",
+
+  "MUD",
+  "SLUDGE",
+  "BITE",
+  "GRIT",
+  "DISTORTION",
+
+  "SWEETNESS",
+  "HARSHNESS",
+  "MELLOWNESS",
+  "WARMTH",
+  "COLDNESS",
+  "NOTE DEFINITION",
+  "CONTROL",
+  "SMOOTHNESS",
+  "GRIT",
+  "EDGE",
+  "CRUNCHY BREAKUP",
+  "SEARING SOLO POWER",
+  "SWEETENING",
+  "INDEFINABLE MOJO",
+  "DIRT",
+  "SPACE",
+  "PUNCH",
+  "THICKNESS",
+  "MUSICALITY",
+  "HARMONICS",
+  "BALANCE",
+  "BRILLIANCE",
+  "DARKNESS",
+  "DEEPNESS",
+  "DETAIL",
+  "DISTANCE",
+  "DRYNESS",
+  "DYNAMICS",
+  "EVENNESS",
+  "FATNESS",
+  "GENTLENESS",
+  "PUNCH",
+  "PURITY",
+  "RESONANCE",
+  "RICHNESS",
+  "SATURATION",
+  "WETNESS",
+  "PURR",
+  "ROAR"
+];
+
+export const ampKnobWords = [
+  "VOLUME",
+  "TONE",
+  "MID_BITE",
+  "TREBLE",
+  "BASS",
+  "MID",
+  "MIDDLE",
+  "REVERB",
+  "SPEED",
+  "INTENSITY",
+  "DEPTH",
+  "VOICING",
+  "DWELL",
+  "GAIN",
+  "GAIN 2",
+  "PRESENCE",
+  "MASTER",
+  "SOLO",
+  "POWER",
+  "TONE SHAPE",
+  "VOL",
+  "VERB",
+  "LIMITER",
+  "RATE",
+  "HI CUT",
+  "LO CUT",
+  "EQ",
+  "EQ 2",
+  "DISTORTION",
+  "VIB/CHORUS",
+
+  "MUD",
+  "SLUDGE",
+  "MOJO",
+
+  "SWEET",
+  "HARSH",
+  "MELLOW",
+  "WARM",
+  "COLD",
+  "DEFN",
+  "CTRL",
+  "SMOOTH",
+  "GRIT",
+  "EDGE",
+  "CRUNCH",
+  "SEAR",
+  "SUBTLE",
+  "DIRT",
+  "SPACE",
+  "PUNCH",
+  "THICK",
+  "MUSIC",
+  "HARMONICS",
+  "BAL",
+  "DARK",
+  "DEEP",
+  "DETAIL",
+  "DIST",
+  "DRY",
+  "DYN",
+  "EVEN",
+  "FAT",
+  "GENTLE",
+  "PURE",
+  "RICH",
+  "SAT",
+  "WET",
+  "PURR",
+  "ROAR"
+];
+
+export const ampSwitchWords: [string, string][] = [["LEAD", "RHYTHM"]];

@@ -3,8 +3,7 @@
     <div v-if="label !== '&nbsp;'" class="KnobLabel">{{ label }}</div>
     <div v-if="label === '&nbsp;'" class="KnobLabel">&nbsp;</div>
     <div class="Knob">
-      <div class="Knob__Inner">
-      </div>
+      <div class="Knob__Inner"></div>
     </div>
   </div>
 </template>
@@ -13,7 +12,7 @@
 @media print {
   .Knob {
     /* box-shadow: none !important; */
-    -webkit-print-color-adjust:exact;
+    -webkit-print-color-adjust: exact;
     -webkit-filter: opacity(1);
   }
 }
@@ -38,7 +37,7 @@
 
   background-color: black;
   border-radius: 1em;
-  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.66);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.66);
 }
 
 .Knob::before {
@@ -78,14 +77,10 @@
 
 <script>
 export default {
-  props: [
-    'label',
-  ],
+  props: ["label"],
 
   setup() {
-    return {
-
-    };
-  },
-}
+    return {};
+  }
+};
 </script>

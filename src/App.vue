@@ -45,8 +45,13 @@ html {
   padding: 0;
 }
 
-main > nav {
+main#app {
+  padding: 1rem;
+}
+
+main#app > nav {
   display: flex;
+  margin-bottom: 1rem;
   & > * {
     margin-right: 1rem;
   }
