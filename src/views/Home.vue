@@ -1,16 +1,12 @@
 <template>
   <div class="home">
-    <RandomGuitarPedalWithCopy :seed="Date.now()" />
+    Welcome to Stevewater. Shape your tone.
   </div>
 </template>
 
 <script>
-import RandomGuitarPedalWithCopy from "@/components/RandomGuitarPedalWithCopy.vue";
-
 export default {
   name: "Home",
-  components: {
-    RandomGuitarPedalWithCopy
-  }
+  components: {}
 };
 </script>

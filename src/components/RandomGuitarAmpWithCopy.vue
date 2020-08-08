@@ -66,7 +66,7 @@ export default class RandomGuitarPedalWithCopy extends Vue {
       knobLabelPosition: rng.choice(["top", "bottom"]),
       groupLabelPosition: rng.choice(["top", "bottom"]),
       groups: groups,
-      height: rng.choice(["10em", "20em", "30em"])
+      height: rng.choice(["10em", "10em", "15em", "20em", "30em"])
     };
   }
 }
