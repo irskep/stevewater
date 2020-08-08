@@ -13,7 +13,7 @@ export interface GuitarAmpValues {
   bg2Choice: number;
   fontChoice: number;
   knobChoice: number;
-  grillStyle: "grid" | "crosshatch";
+  grillStyle: "grid" | "crosshatch"; // | "crosshatch2" | "grid2";
   knobLabelPosition: "top" | "bottom";
   groupLabelPosition: "top" | "bottom";
   groups: ControlGroup[];

@@ -15,7 +15,7 @@ export default {
 .AmpControls {
   background-color: var(--bg2);
   color: var(--textOnBg2);
-  padding: 0.2em;
+  padding: 0.2em 1em;
 
   display: flex;
   flex-direction: row;

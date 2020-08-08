@@ -1,5 +1,5 @@
 <template>
-  <div class="AmpControlGroup">
+  <div :class="{ AmpControlGroup: true, 'm-hidden': hidden }">
     <div
       v-if="values.groupLabelPosition === 'top'"
       class="AmpControlGroup_Label m-top"
@@ -27,7 +27,7 @@
 <script>
 export default {
   components: {},
-  props: ["values", "label"]
+  props: ["values", "label", "hidden"]
 };
 </script>
 
@@ -39,6 +39,10 @@ export default {
 }
 
 .AmpControlGroup_Label {
+  .m-hidden & {
+    visibility: hidden;
+  }
+
   font-size: 0.5em;
 
   display: flex;

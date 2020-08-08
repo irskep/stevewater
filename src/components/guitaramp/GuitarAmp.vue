@@ -3,8 +3,16 @@
     <div v-html="rawStyle"></div>
     <AmpBody>
       <AmpControls :values="values">
+        <AmpControlGroup :hidden="true" :values="values" label=" ">
+          <InputJack
+            :values="values"
+            appearance="hex"
+            label="INPUT"
+          ></InputJack>
+        </AmpControlGroup>
         <AmpControlGroup
           v-for="group in values.groups"
+          :hidden="false"
           :values="values"
           :key="group.label"
           :label="group.label"
@@ -57,9 +65,17 @@ import AmpControls from "./AmpControls.vue";
 import AmpControlGroup from "./AmpControlGroup.vue";
 import CabGrill from "./CabGrill.vue";
 import AmpKnob from "./AmpKnob.vue";
+import InputJack from "./InputJack.vue";
 
 export default {
-  components: { AmpBody, AmpControls, CabGrill, AmpKnob, AmpControlGroup },
+  components: {
+    AmpBody,
+    AmpControls,
+    CabGrill,
+    AmpKnob,
+    AmpControlGroup,
+    InputJack
+  },
 
   props: [
     "name",

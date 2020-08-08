@@ -35,16 +35,19 @@ export default {
   --knobSize: 1em;
 
   &.m-top {
+    margin-bottom: 0.5em;
     flex-direction: column;
   }
 
   &.m-bottom {
+    margin-top: 0.5em;
     flex-direction: column-reverse;
   }
 
   .Label {
     font-size: 0.5em;
     margin: 0 0.2em;
+    white-space: pre;
   }
 
   .AmpKnob {
