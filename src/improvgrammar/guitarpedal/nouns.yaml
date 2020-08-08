@@ -1,0 +1,470 @@
+# To add:
+# tremolo
+
+### SIMPLE NOUNS ###
+
+purposeNoun:
+  bind: true
+  groups:
+    - tags: [['purpose', 'looping']]
+      phrases:
+        - 'looping'
+    - tags: [['purpose', 'tone', 'reverb']]
+      phrases:
+        - 'reverb'
+    - tags: [['purpose', 'tone', 'delay']]
+      phrases:
+        - 'delay'
+    - tags: [['purpose', 'tone', 'eq']]
+      phrases:
+        - 'EQ'
+    - tags: [['purpose', 'tone', 'synth']]
+      phrases:
+        - 'synth sounds'
+    - tags: [['purpose', 'tone', 'chorus']]
+      phrases:
+        - 'chorus effects'
+    - tags: [['purpose', 'tone', 'vibrato']]
+      phrases:
+        - 'vibrato effects'
+    - tags: [['purpose', 'tone', 'distortion']]
+      phrases:
+        - 'distortion'
+    - tags: [['purpose', 'tone', 'noise']]
+      phrases:
+        - 'noise suppression'
+
+effectDescription:
+  groups:
+    - tags: [['purpose', 'looping']]
+      dry: false
+      phrases:
+        - 'sounds'
+    # - tags: [['purpose', 'tone', 'mod']]
+    #   phrases:
+    #     - 'Modulation'
+    - tags: [['purpose', 'tone', 'reverb']]
+      dry: false
+      phrases:
+        - 'reverb'
+    - tags: [['purpose', 'tone', 'delay']]
+      dry: false
+      phrases:
+        - 'delay'
+    - tags: [['purpose', 'tone', 'eq']]
+      dry: false
+      phrases:
+        - 'equalization'
+    - tags: [['purpose', 'tone', 'synth']]
+      dry: false
+      phrases:
+        - 'synthesis'
+    - tags: [['purpose', 'tone', 'chorus']]
+      dry: false
+      phrases:
+        - 'chorus'
+    - tags: [['purpose', 'tone', 'vibrato']]
+      dry: false
+      phrases:
+        - 'vibrato'
+    - tags: [['purpose', 'tone', 'distortion']]
+      dry: false
+      phrases:
+        - 'fuzz'
+        - 'distortion'
+    - tags: [['purpose', 'tone', 'noise']]
+      dry: false
+      phrases:
+        - 'noise'
+
+effectDescriptions:
+  groups:
+    - tags: []
+      phrases:
+        - 'sounds'
+        - 'tones'
+    - tags: [['purpose', 'looping']]
+      dry: false
+      phrases:
+        - 'sounds'
+    # - tags: [['purpose', 'tone', 'mod']]
+    #   phrases:
+    #     - 'Modulation'
+    - tags: [['purpose', 'tone', 'reverb']]
+      dry: false
+      phrases:
+        - 'reverbs'
+    - tags: [['purpose', 'tone', 'delay']]
+      dry: false
+      phrases:
+        - 'delays'
+    - tags: [['purpose', 'tone', 'eq']]
+      dry: false
+      phrases:
+        - 'EQ styles'
+    - tags: [['purpose', 'tone', 'synth']]
+      dry: false
+      phrases:
+        - 'synths'
+    - tags: [['purpose', 'tone', 'chorus']]
+      dry: false
+      phrases:
+        - 'choruses'
+    - tags: [['purpose', 'tone', 'vibrato']]
+      dry: false
+      phrases:
+        - 'vibratos'
+    - tags: [['purpose', 'tone', 'distortion']]
+      dry: false
+      phrases:
+        - 'fuzzes'
+        - 'distortions'
+        - 'overdrives'
+    - tags: [['purpose', 'tone', 'noise']]
+      dry: false
+      phrases:
+        - 'noise suppression styles'
+
+subItems:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - 'presets'
+        - 'effects'
+        - 'effect types'
+        - 'modes'
+        - 'settings'
+    - tags: [['purpose', 'tone', 'reverb']]
+      phrases:
+        - 'reverb types'
+    - tags: [['purpose', 'tone', 'delay']]
+      phrases:
+        - 'delay modes'
+    - tags: [['purpose', 'tone', 'eq']]
+      phrases:
+        - 'frequency range settings'
+
+effectName:
+  groups:
+    - tags: []
+      dry: false
+      phrases:
+      - '[:effectNamePrefix] [:effectNameSuffix]'
+
+benefit:
+  groups:
+    - tags: []
+      phrases:
+        - '[:benefitSingular]'
+        - '[:benefitPlural]'
+        - '[id :benefitSingular]'
+        - '[id :benefitPlural]'
+        - '[id id :benefitSingular]'
+        - '[id id :benefitPlural]'
+
+
+benefitSingular:
+  groups:
+    - tags: []
+      phrases:
+        - 'serial [#2-12]-track operation'
+        - 'high-quality performance'
+        - 'a clean boost'
+        - 'razor-sharp precision'
+        - "[:brand]'s innovative Multi-dimensional Processing technology"
+        - 'tap tempo'
+        - 'smart bypass switching'
+        - 'a momentary knob ramp'
+        - 'tap tempo with note divisions'
+        - 'a trio of selectable [:circuits]'
+        - 'an added Tone control'
+        - 'expansive stereo imaging'
+        - 'a cool custom-built enclosure'
+        - 'expression pedal control'
+        - 'its cocktail of germanium and silicon transistors'
+        - 'AB-Y functionality'
+        - 'buffered tuner output'
+        - 'a 20db clean boost'
+        - 'an expression pedal jack for volume control'
+        - 'coveted K-style harmonic saturation'
+        - 'plenty of clean output'
+        - 'touch-preserving headroom'
+        - 'endless amp-pushing boost'
+        - 'an internal charge pump that boosts its 9-volt operating voltage up to 18 volts'
+        - 'a genuine, US-made NOS 6205 preamp tube'
+    - tags: [['purpose', 'looping']]
+      phrases:
+        - 'unlimited overdubbing'
+    - tags: [['purpose', 'tone']]
+      phrases:
+        - 'selectable [#1-3]- and [#4-9]-stage modes for two levels of harmonic complexity'
+    - tags: [['purpose', 'tone', 'distortion']]
+      phrases:
+        - 'edge-of-breakup, amp-style grit'
+        - "'80s-style face-melting distortion"
+        - 'a dual gain staging option'
+        - '3-band EQ'
+    - tags: [['purpose', 'tone', 'delay']]
+      phrases:
+        - 'adventurous delays and reverbs'
+        - 'self-oscillation'
+        - 'chewy tape-style echo'
+    - tags: [['purpose', 'tone', 'reverb']]
+      phrases:
+        - 'vintage-style spring reverb'
+    - tags: [['purpose', 'tone', 'synth']]
+      phrases:
+        - 'a modulated monophonic [:twoLetters] circuit'
+
+benefitPlural:
+  groups:
+    - tags: []
+      phrases:
+        - 'comprehensive tone-shaping controls'
+        - 'ample options for external control'
+        - 'boosted power rails'
+        - '[:superlative] headroom and definition'
+        - '[#2-9] master algorithms'
+        - 'upgraded SMD components'
+        - 'six time division settings'
+    - tags: [['purpose', 'tone', 'distortion']]
+      phrases:
+        - 'three selectable gain ranges'
+    - tags: [['purpose', 'tone', 'reverb']]
+      phrases:
+        - 'studio-grade, hall, and plate algorithms'
+        - 'modern-sounding textures'
+        - 'adventurous delays and reverbs'
+
+pedal:
+  groups:
+    - tags: []
+      dry: false
+      phrases:
+        - 'pedal'
+        - 'effects pedal'
+        - 'stomp box'
+
+pedals:
+  groups:
+    - tags: []
+      phrases:
+        - 'pedals'
+        - 'effects pedals'
+        - 'stomp boxes'
+
+pedalAlternative:
+  groups:
+    - tags: []
+      phrases:
+        - 'rack effects processor'
+        - 'effects pedal'
+        - 'effects processor'
+        - 'pedal'
+    - tags: [['purpose', 'tone', 'synth']]
+      phrases:
+        - 'synthesizer'
+        - 'synth'
+        - 'rack-mounted synth'
+        - 'rack-mounted synthesizer'
+
+controls:
+  groups:
+    - tags: []
+      phrases:
+        - 'simple [:knobsOrSwitches]'
+        - 'easy [:knobsOrSwitches]'
+        - 'easy-to-use [:knobsOrSwitches]'
+        - 'user-friendly [:knobsOrSwitches]'
+
+### INTERESTING NOUNS ###
+
+performanceCharacteristics:
+  groups:
+    - tags: [['purpose', 'looping']]
+      phrases:
+        - 'independent song parts'
+        - 'independent loops'
+    - tags: [['purpose', 'tone']]
+      phrases:
+        - '[:toneAdj] tones'
+        - '[id :toneAdj] tones'
+
+units:
+  groups:
+    - tags: [['purpose', 'looping']]
+      phrases:
+        - 'hours'
+    - tags: [['purpose', 'tone']]
+      phrases:
+        - 'kinds'
+        - 'types'
+        - 'levels'
+        - 'layers'
+
+oomphs:
+  groups:
+    - tags: [['purpose', 'looping']]
+      phrases:
+        - 'hours of recording time'
+    - tags: [['purpose', 'tone', 'reverb']]
+      phrases:
+        - 'reverb modes'
+        - 'reverb algorithms'
+    - tags: [['purpose', 'tone', 'delay']]
+      phrases:
+        - 'delay modes'
+        - 'delay algorithms'
+    - tags: [['purpose', 'tone', 'eq']]
+      phrases:
+        - 'EQ bands'
+        - 'EQ algorithms'
+    - tags: [['purpose', 'tone', 'chorus']]
+      phrases:
+        - 'chorus modes'
+        - 'chorus algorithms'
+    - tags: [['purpose', 'tone', 'vibrato']]
+      phrases:
+        - 'vibrato modes'
+    - tags: [['purpose', 'tone', 'distortion']]
+      phrases:
+        - 'types of distortion'
+    - tags: [['purpose', 'tone']]
+      phrases:
+        - 'types of tone quality'
+        - 'tiers of freshness'
+        - 'oomph-factors'
+        - 'tone variants'
+
+timeOrTone:
+  groups:
+    - tags: [['purpose', 'looping']]
+      phrases:
+        - 'space'
+        - 'room'
+    - tags: [['purpose', 'tone']]
+      phrases:
+        - 'possibilities'
+        - 'options'
+        - 'new discoveries'
+
+oldEffect:
+  groups:
+    - tags: []
+      phrases:
+        - 'sounds'
+        - 'tones'
+    - tags: [['purpose', 'looping']]
+      phrases:
+        - 'tape loops'
+    # - tags: [['purpose', 'tone', 'mod']]
+    #   phrases:
+    #     - 'Modulation'
+    - tags: [['purpose', 'tone', 'reverb']]
+      phrases:
+        - 'chamber reverb'
+        - 'small room reverb'
+    - tags: [['purpose', 'tone', 'delay']]
+      phrases:
+        - 'tape-style delays'
+    - tags: [['purpose', 'tone', 'eq']]
+      phrases:
+        - 'analog-modeled EQ'
+    - tags: [['purpose', 'tone', 'synth']]
+      phrases:
+        - 'analog synth simulation'
+        - "synth sounds of the '70s and '80s"
+    - tags: [['purpose', 'tone', 'chorus']]
+      phrases:
+        - 'simulated detuning'
+    - tags: [['purpose', 'tone', 'vibrato']]
+      phrases:
+        - 'Leslie-induced vibrato'
+        - 'juicy, whirling Leslie approximations'
+        - 'liquid ’80s textures'
+    - tags: [['purpose', 'tone', 'distortion']]
+      phrases:
+        - 'tube distortion'
+        - 'transparently clean'
+    - tags: [['purpose', 'tone', 'noise']]
+      phrases:
+        - 'simple gating'
+
+newEffect:
+  groups:
+    - tags: []
+      phrases:
+        - 'sounds'
+        - 'tones'
+    - tags: [['purpose', 'looping']]
+      phrases:
+        - 'MIDI-synced solo jams'
+    # - tags: [['purpose', 'tone', 'mod']]
+    #   phrases:
+    #     - 'Modulation'
+    - tags: [['purpose', 'tone', 'reverb']]
+      phrases:
+        - 'convolution reverb'
+        - 'long, modulated cascades of reflection'
+    - tags: [['purpose', 'tone', 'delay']]
+      phrases:
+        - 'shimmer effects'
+    - tags: [['purpose', 'tone', 'eq']]
+      phrases:
+        - 'parametric EQ'
+    - tags: [['purpose', 'tone', 'synth']]
+      phrases:
+        - 'effect chains'
+        - 'synths made possible only by software'
+    - tags: [['purpose', 'tone', 'chorus']]
+      phrases:
+        - 'parameterized LFO'
+    - tags: [['purpose', 'tone', 'vibrato']]
+      phrases:
+        - 'digital pitch bending'
+    - tags: [['purpose', 'tone', 'distortion']]
+      phrases:
+        - 'solid-state distortion'
+        - 'glowing chime'
+    - tags: [['purpose', 'tone', 'noise']]
+      phrases:
+        - 'algorithm-assisted waveform shaping'
+
+circuits:
+  groups:
+    - tags: []
+      phrases:
+        - 'circuits'
+        - 'channels'
+        - 'sound banks'
+    - tags: [['purpose', 'looping']]
+      phrases:
+        - 'tracks'
+    # - tags: [['purpose', 'tone', 'mod']]
+    #   phrases:
+    #     - ''
+#    - tags: [['purpose', 'tone', 'reverb']]
+#      phrases:
+#        - ''
+#    - tags: [['purpose', 'tone', 'delay']]
+#      phrases:
+#        - ''
+    - tags: [['purpose', 'tone', 'eq']]
+      phrases:
+        - 'EQs'
+    - tags: [['purpose', 'tone', 'synth']]
+      phrases:
+        - 'voices'
+#    - tags: [['purpose', 'tone', 'chorus']]
+#      phrases:
+#        - ''
+#    - tags: [['purpose', 'tone', 'vibrato']]
+#      phrases:
+#        - ''
+    - tags: [['purpose', 'tone', 'distortion']]
+      phrases:
+        - 'selectable clipping diodes'
+#    - tags: [['purpose', 'tone', 'noise']]
+#      phrases:
+#        - 'Noise Suppression'

@@ -1,0 +1,18 @@
+output:
+  groups:
+    - tags: []
+      phrases:
+        - '[:outputAlways]'
+        - '[:outputAlways]'
+        - '[:outputAlways]/[:outputExtra]'
+        - '[:outputAlways]/[:outputExtra]/[:outputExtra]'
+        - '[:outputExtra]/[:outputAlways]'
+        - '[:outputExtra]/[:outputExtra]/[:outputAlways]'
+
+input:
+  groups:
+    - tags: []
+      phrases:
+        - '[:inputAlways]'
+        - '[:inputAlways]/[:inputExtra]'
+        - '[:inputExtra]/[:inputAlways]'

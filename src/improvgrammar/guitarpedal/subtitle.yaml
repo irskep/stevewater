@@ -1,0 +1,163 @@
+subtitle:
+  groups:
+    - tags: []
+      phrases:
+        - '[:subtitlePrefix] [:purpose] [:subtitleNoun]'
+        - '[:subtitlePrefix] [:purpose] [:subtitleNoun]'
+        - '[:subtitlePrefix] [:purpose] [:subtitleNoun]'
+        - '[:subtitlePrefix] [:purpose] [:subtitleNoun]'
+        - '[:subtitlePrefix] [:purpose] [:subtitleNoun]'
+        - '[:subtitlePrefix] [:purpose] [:subtitleNoun]'
+        - '[:subtitlePacked] with [:subtitleSuperlative] [:purpose] [:subtitleOptions]'
+        - '[:purpose] for the Tone [:aficionado]'
+        - "[:brand]'s Most [:subtitleSuperlative] [:purpose] [:subtitleNoun]"
+        - 'Your Always-on [:purpose] [:capPedal]'
+        - 'Time-tested [:purpose], Upgraded Tone'
+        - 'Beyond [:subtitleClassic] [:purpose]'
+        - '[:subtitleSuperlative] [:purpose]'
+        - '[:subtitleVersatile] [:purpose] [:capPedal]'
+        - 'All the [:purpose] You Could Ask For'
+        - "The World's Most [:subtitleSuperlative] [:purpose] [:capPedal]"
+        - 'A New Flavor of [:purpose]'
+
+subtitleVersatile:
+  groups:
+    - tags: []
+      phrases:
+        - 'Versatile'
+        - 'Flexible'
+
+subtitlePacked:
+  groups:
+    - tags: []
+      phrases:
+        - 'Stuffed'
+        - 'Packed'
+        - 'Fully Loaded'
+        - 'Brimming'
+        - 'Bursting'
+        - 'Sizzling'
+
+subtitleSuperlative:
+  groups:
+    - tags: []
+      phrases:
+        - 'Incredible'
+        - 'Amazing'
+        - 'Dazzling'
+        - 'Fantastic'
+        - 'Must-have'
+        - 'Serious'
+        - 'Elite'
+        - 'Top-tier'
+        - 'Powerful'
+        - 'Iconic'
+        - 'Popular'
+
+subtitleOptions:
+  groups:
+    - tags: []
+      phrases:
+        - 'Options'
+        - ''
+
+subtitlePrefix:
+  groups:
+    - tags: []
+      phrases:
+        - 'Total'
+        - 'Your'
+        - 'Fully Loaded'
+        - 'Next-generation'
+        - "[:brand]'s Most Advanced"
+        - 'Your Onstage'
+        - 'Classic'
+        - 'Vintage'
+        - 'Hot-rodded'
+        - 'Next-gen'
+        - 'Feature-rich'
+        - 'Dazzling'
+        - 'Must-have'
+        - 'Powerful'
+        - "The World's Most Popular"
+        - 'Killer'
+
+aficionado:
+  groups:
+    - tags: []
+      phrases:
+        - 'Aficionado'
+        - 'Freak'
+        - 'Hipster'
+        - 'Purist'
+
+purpose:
+  bind: true
+  groups:
+#    - tags: [['purpose', 'looping']]
+#      phrases:
+#        - 'Looping'
+    # - tags: [['purpose', 'tone', 'mod']]
+    #   phrases:
+    #     - 'Modulation'
+    - tags: [['purpose', 'tone', 'reverb']]
+      phrases:
+        - 'Reverb'
+    - tags: [['purpose', 'tone', 'delay']]
+      phrases:
+        - 'Delay'
+        - 'Digital Delay'
+    - tags: [['purpose', 'tone', 'eq']]
+      phrases:
+        - 'EQ'
+    - tags: [['purpose', 'tone', 'synth']]
+      phrases:
+        - 'Polyphonic Synth'
+    - tags: [['purpose', 'tone', 'chorus']]
+      phrases:
+        - 'Chorus'
+    - tags: [['purpose', 'tone', 'vibrato']]
+      phrases:
+        - 'Vibrato'
+    - tags: [['purpose', 'tone', 'distortion']]
+      phrases:
+        - 'Distortion'
+    - tags: [['purpose', 'tone', 'noise']]
+      phrases:
+        - 'Noise Suppression'
+
+capPedal:
+  groups:
+    - tags: []
+      phrases:
+        - 'Pedal'
+        - 'Effects Pedal'
+        - 'Stompbox'
+
+subtitleClassic:
+  groups:
+    - tags: []
+      phrases:
+        - 'Vintage'
+        - 'Classic'
+        - 'Standard'
+
+subtitleNoun:
+  groups:
+    - tags: []
+      phrases:
+        - 'Workstation'
+        - 'Pedal'
+        - 'Stomp Box'
+        - 'Station'
+        - 'Machine'
+        - 'and More'
+        - 'with Something More'
+        - 'with So Much More'
+        - 'Pedal for Guitar and Bass'
+        - ''
+        - 'with a Twist'
+        - 'Tones'
+        - 'in a Compact Pedal'
+        - 'Tool'
+        - 'Effects'
