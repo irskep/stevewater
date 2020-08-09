@@ -39,6 +39,13 @@
 
       <div class="ControlCabSpacer"></div>
 
+      <div
+        v-if="values.modelNamePosition === 'underControls'"
+        class="ModelNameContainer"
+      >
+        <ModelName :hasbackground="false" :values="values"></ModelName>
+      </div>
+
       <CabGrill :values="values">
         <ModelName
           v-if="values.modelNamePosition.slice(0, 3) === 'cab'"
@@ -140,5 +147,12 @@ export default {
 <style lang="scss">
 .ControlCabSpacer {
   height: 0.5em;
+}
+
+.ModelNameContainer {
+  padding-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

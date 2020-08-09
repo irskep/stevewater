@@ -38,8 +38,10 @@ export default class RandomGuitarPedalWithCopy extends Vue {
 
     const numGroups = rng.choice([2, 2, 2, 2, 3, 3, 3, 4, 5, 6]);
     const groups: ControlGroup[] = [];
+    let totalControls = 0;
     for (let i = 0; i < numGroups; i++) {
       const numControls = rng.choice([2, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6]);
+      totalControls += numControls;
       const g: ControlGroup = { label: groupLabels[i], controls: [] };
       for (let j = 0; j < numControls; j++) {
         g.controls.push({
@@ -70,7 +72,7 @@ export default class RandomGuitarPedalWithCopy extends Vue {
       knobLabelPosition: rng.choice(["top", "bottom"]),
       groupLabelPosition: rng.choice(["top", "bottom"]),
       groups: groups,
-      height: rng.choice(["10em", "10em", "15em", "20em", "30em"]),
+      height: `${totalControls * 2}em`,
       powerSwitches: rng.choice(ampPowerColorCombos).map((style, i) => ({
         label: powerSwitchWords[i],
         style: style
@@ -82,7 +84,8 @@ export default class RandomGuitarPedalWithCopy extends Vue {
         "cabCenter",
         "cabTopLeft",
         "cabTopRight",
-        "cabTopCenter"
+        "cabTopCenter",
+        "underControls"
       ])
     };
   }

@@ -17,7 +17,8 @@ type ModelNamePosition =
   | "cabCenter"
   | "cabTopLeft"
   | "cabTopRight"
-  | "cabTopCenter";
+  | "cabTopCenter"
+  | "underControls";
 
 export interface GuitarAmpValues {
   bgChoice: number;
