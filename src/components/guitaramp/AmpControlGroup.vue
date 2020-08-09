@@ -4,6 +4,7 @@
       AmpControlGroup: true,
       'm-hidden': hidden,
       'm-visible': !hidden,
+      'm-single-control': numControls == 1,
       [`m-style-${values.groupStyle}`]: true
     }"
   >
@@ -12,7 +13,7 @@
       class="AmpControlGroup_Label m-top"
     >
       <div class="SpacerLeft"><div class="SpacerLeft_Inner"></div></div>
-      <div class="Text">{{ label }}</div>
+      <div class="Text">{{ numControls > 1 ? label : "&nbsp;" }}</div>
       <div class="SpacerRight"><div class="SpacerRight_Inner"></div></div>
     </div>
 
@@ -25,7 +26,7 @@
       class="AmpControlGroup_Label m-bottom"
     >
       <div class="SpacerLeft"><div class="SpacerLeft_Inner"></div></div>
-      <div class="Text">{{ label }}</div>
+      <div class="Text">{{ numControls > 1 ? label : "&nbsp;" }}</div>
       <div class="SpacerRight"><div class="SpacerRight_Inner"></div></div>
     </div>
   </div>
@@ -34,7 +35,12 @@
 <script>
 export default {
   components: {},
-  props: ["values", "label", "hidden"]
+  props: {
+    values: {},
+    label: {},
+    hidden: { default: false },
+    numControls: { default: 1 }
+  }
 };
 </script>
 
@@ -62,7 +68,8 @@ export default {
 }
 
 .AmpControlGroup_Label {
-  .m-hidden & {
+  .m-hidden &,
+  .m-single-control & {
     visibility: hidden;
   }
 

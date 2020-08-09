@@ -3,7 +3,12 @@
     <div v-html="rawStyle"></div>
     <AmpBody>
       <AmpControls :values="values">
-        <AmpControlGroup :hidden="true" :values="values" label=" ">
+        <AmpControlGroup
+          :numControls="1"
+          :hidden="true"
+          :values="values"
+          label=" "
+        >
           <InputJack
             :values="values"
             appearance="hex"
@@ -20,6 +25,7 @@
         <AmpControlGroup
           v-for="group in values.groups"
           :hidden="false"
+          :numControls="group.controls.length"
           :values="values"
           :key="group.label"
           :label="group.label"
@@ -38,7 +44,12 @@
           v-if="values.modelNamePosition === 'inlineControlsRight'"
         ></ModelName>
 
-        <AmpControlGroup :hidden="true" :values="values" label=" ">
+        <AmpControlGroup
+          :numControls="1"
+          :hidden="true"
+          :values="values"
+          label=" "
+        >
           <PowerSwitch
             v-for="s in values.powerSwitches"
             :s="s"
