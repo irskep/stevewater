@@ -82,7 +82,7 @@ export default class RandomGuitarPedalWithCopy extends Vue {
       })),
       powerSwitchStyle: rng.choice(["flat", "round"]),
       brandName: rng.choice(ampBrandNames),
-      modelName: ampGen.gen("ampname"),
+      modelName: ampGen.gen("ampname", {}),
       modelNamePosition: rng.choice([
         "cabCenter",
         "cabTopLeft",

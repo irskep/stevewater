@@ -1,10 +1,12 @@
-declare module "makeImprovGenerators" {
-  interface Improv {
-    gen: (name: string, model: unknown) => string;
-  }
-
-  export const descGen: Improv;
-  export const subGen: Improv;
-  export const pedalWordsGen: Improv;
-  export const ampGen: Improv;
+interface Improv {
+  gen: (name: string, model: unknown | undefined) => string;
 }
+
+export default function(
+  rng: () => number
+): {
+  descGen: Improv;
+  subGen: Improv;
+  pedalWordsGen: Improv;
+  ampGen: Improv;
+};
