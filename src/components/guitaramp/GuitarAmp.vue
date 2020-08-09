@@ -76,6 +76,7 @@
         ></ModelName>
       </CabGrill>
     </AmpBody>
+    <AmpFeet></AmpFeet>
   </div>
 </template>
 
@@ -103,6 +104,7 @@ import {
   ampTextOnBodyColors
 } from "@/const";
 import AmpBody from "./AmpBody.vue";
+import AmpFeet from "./AmpFeet.vue";
 import AmpControls from "./AmpControls.vue";
 import AmpControlGroup from "./AmpControlGroup.vue";
 import CabGrill from "./CabGrill.vue";
@@ -114,6 +116,7 @@ import ModelName from "./ModelName.vue";
 export default {
   components: {
     AmpBody,
+    AmpFeet,
     AmpControls,
     CabGrill,
     AmpKnob,
