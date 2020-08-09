@@ -1,0 +1,81 @@
+ampname:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - "[:newname]"
+
+# letter, shortIdentifier live in desc.yaml
+
+basename:
+  groups:
+    - tags: []
+      phrases:
+        - "The [:namenoun]"
+        - "The [id :namenoun]"
+
+        - "[:twoLetters]"
+        - "[:twoLetters]"
+        - "[:twoLetters]-[:shortIdentifier]"
+        - "[:letter][:letter][:letter]"
+        - "[:letter][:letter][:letter][#0-9][#0-9][#0-9]"
+        - "[id :letter][:letter][:letter][#0-9][#0-9][#0-9]"
+        - "[:letter][:letter][#0-9][#0-9][:letter][#0-9]"
+        - "[:letter][:letter][#0-9][#0-9][:letter][:letter][#0-9][#0-9][:letter][:letter][#0-9][#0-9]"
+
+newname:
+  groups:
+    - tags: []
+      phrases:
+        - "[:basename]"
+        - "[:basename]"
+        - "[:basename]"
+        - "[:basename]"
+        - "[:basename]"
+        - "[:basename] [:mark2]"
+        - "[:basename] Series"
+        - "[:basename] Custom Series"
+        - "[:basename] Classic"
+        - "[:basename] Vintage"
+        - "[:basename] Deluxe"
+        - "[:basename] Reissue"
+
+numberword:
+  groups:
+    - tags: []
+      phrases:
+        - "One"
+        - "Two"
+        - "Three"
+        - "Four"
+        - "Five"
+        - "Six"
+        - "Seven"
+        - "Eight"
+        - "Nine"
+        - "Ten"
+        - "Eleven"
+        - "Twelve"
+
+romanNumeral:
+  groups:
+    - tags: []
+      phrases:
+        - "II"
+        - "III"
+        - "IV"
+        - "V"
+        - "VI"
+        - "VII"
+        - "VIII"
+        - "IX"
+        - "X"
+        - "XI"
+        - "XII"
+
+mark2:
+  groups:
+    - tags: []
+      phrases:
+        - "Mark [:romanNumeral]"
+        - "Mark [:numberword]"

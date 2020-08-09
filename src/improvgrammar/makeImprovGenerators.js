@@ -1,5 +1,6 @@
 import Improv from "improv";
-import omniGrammar from "@/improvgrammar/guitarpedal/all";
+import pedalGrammar from "@/improvgrammar/guitarpedal/all";
+import ampGrammar from "@/improvgrammar/guitaramp/all";
 
 // const usedSymbols = {};
 // function uniquify(grammar) {
@@ -17,7 +18,7 @@ import omniGrammar from "@/improvgrammar/guitarpedal/all";
 // uniquify(nameOfMusicianGrammar);
 // uniquify(pedalWordsGrammar);
 
-// const omniGrammar = Object.assign(
+// const pedalGrammar = Object.assign(
 //   {},
 //   subtitleGrammar,
 //   descGrammar,
@@ -27,10 +28,10 @@ import omniGrammar from "@/improvgrammar/guitarpedal/all";
 //   pedalWordsGrammar);
 
 // console.log(
-//   omniGrammar.desc1.groups[0].phrases.length,
-//   omniGrammar.extra.groups[0].phrases.length,
-//   omniGrammar.desc1.groups[0].phrases.length *
-//     omniGrammar.extra.groups[0].phrases.length
+//   pedalGrammar.desc1.groups[0].phrases.length,
+//   pedalGrammar.extra.groups[0].phrases.length,
+//   pedalGrammar.desc1.groups[0].phrases.length *
+//     pedalGrammar.extra.groups[0].phrases.length
 // );
 
 function dryness() {
@@ -88,7 +89,7 @@ const builtins = {
 };
 
 export default function makeImprovGenerators(alea) {
-  const subGen = new Improv(omniGrammar, {
+  const subGen = new Improv(pedalGrammar, {
     filters: [
       Improv.filters.mismatchFilter(),
       Improv.filters.partialBonus(),
@@ -102,7 +103,7 @@ export default function makeImprovGenerators(alea) {
     rng: alea
   });
 
-  const pedalWordsGen = new Improv(omniGrammar, {
+  const pedalWordsGen = new Improv(pedalGrammar, {
     filters: [
       Improv.filters.mismatchFilter(),
       Improv.filters.partialBonus(),
@@ -116,7 +117,7 @@ export default function makeImprovGenerators(alea) {
     rng: alea
   });
 
-  const descGen = new Improv(omniGrammar, {
+  const descGen = new Improv(pedalGrammar, {
     filters: [
       Improv.filters.mismatchFilter(),
       Improv.filters.partialBonus(),
@@ -130,5 +131,19 @@ export default function makeImprovGenerators(alea) {
     rng: alea
   });
 
-  return { descGen, subGen, pedalWordsGen };
+  const ampGen = new Improv(Object.assign({}, pedalGrammar, ampGrammar), {
+    filters: [
+      Improv.filters.mismatchFilter(),
+      Improv.filters.partialBonus(),
+      Improv.filters.fullBonus(),
+      dryness()
+    ],
+    builtins,
+    reincorporate: true,
+    // audit: true,
+    persistence: false,
+    rng: alea
+  });
+
+  return { descGen, subGen, pedalWordsGen, ampGen };
 }

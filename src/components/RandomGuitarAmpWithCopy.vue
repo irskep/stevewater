@@ -21,6 +21,7 @@ import {
   ampPowerWords,
   ampBrandNames
 } from "@/const";
+import makeImprovGenerators from "@/improvgrammar/makeImprovGenerators";
 
 @Component({ components: { GuitarAmp } })
 export default class RandomGuitarPedalWithCopy extends Vue {
@@ -32,6 +33,7 @@ export default class RandomGuitarPedalWithCopy extends Vue {
 
   ampValues(): GuitarAmpValues {
     const rng = new RNG(this.seed);
+    const { ampGen } = makeImprovGenerators(rng.getRandom);
 
     const knobLabels = rng.shuffled(ampKnobWords);
     const groupLabels = rng.shuffled(ampKnobGroupWords);
@@ -80,7 +82,7 @@ export default class RandomGuitarPedalWithCopy extends Vue {
       })),
       powerSwitchStyle: rng.choice(["flat", "round"]),
       brandName: rng.choice(ampBrandNames),
-      modelName: "AMP",
+      modelName: ampGen.gen("ampname"),
       modelNamePosition: rng.choice([
         "cabCenter",
         "cabTopLeft",
