@@ -1,5 +1,12 @@
 <template>
-  <div :class="{ AmpControlGroup: true, 'm-hidden': hidden }">
+  <div
+    :class="{
+      AmpControlGroup: true,
+      'm-hidden': hidden,
+      'm-visible': !hidden,
+      [`m-style-${values.groupStyle}`]: true
+    }"
+  >
     <div
       v-if="values.groupLabelPosition === 'top'"
       class="AmpControlGroup_Label m-top"
@@ -36,6 +43,22 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+
+  padding: 0 0.5em;
+
+  &.m-style-lines {
+    .SpacerLeft,
+    .SpacerRight {
+      visibility: hidden;
+    }
+
+    border-right: 1px solid var(--textOnBg2);
+
+    &:last-child,
+    &.m-hidden {
+      border-right: none;
+    }
+  }
 }
 
 .AmpControlGroup_Label {
