@@ -48,12 +48,27 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: stretch;
+
+  &.m-top {
+    .SpacerLeft,
+    .SpacerRight {
+      flex-direction: column-reverse;
+    }
+  }
+  &.m-bottom {
+    align-items: flex-end;
+
+    .SpacerLeft,
+    .SpacerRight {
+      flex-direction: column;
+    }
+  }
 
   .Text {
     flex-grow: 0;
     margin: 0 0.5em;
     white-space: pre;
+    line-height: 1em;
   }
 
   .SpacerLeft,
@@ -63,35 +78,35 @@ export default {
     height: 100%;
 
     display: flex;
-    flex-direction: column-reverse;
     align-items: stretch;
   }
 
   &.m-top {
     .SpacerLeft_Inner,
     .SpacerRight_Inner {
-      margin-top: 1.1em;
-      height: 0.3em;
       border-top: 1px solid var(--textOnBg2);
+      margin-bottom: 0.1rem;
     }
   }
 
   &.m-bottom {
     .SpacerLeft_Inner,
     .SpacerRight_Inner {
-      margin-top: 0.8em;
-      min-width: 0.2em;
-      height: 0.3em;
+      margin-top: 0.1rem;
       border-bottom: 1px solid var(--textOnBg2);
     }
   }
 
   .SpacerLeft_Inner {
+    min-width: 0.2em;
+    height: 0.3em;
     margin-left: 1em;
     border-left: 1px solid var(--textOnBg2);
   }
 
   .SpacerRight_Inner {
+    min-width: 0.2em;
+    height: 0.3em;
     margin-right: 1em;
     border-right: 1px solid var(--textOnBg2);
   }

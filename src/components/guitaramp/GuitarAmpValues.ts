@@ -8,6 +8,11 @@ export interface ControlGroup {
   controls: Control[];
 }
 
+export interface AmpPowerSwitch {
+  label: string;
+  style: string;
+}
+
 export interface GuitarAmpValues {
   bgChoice: number;
   bg2Choice: number;
@@ -18,4 +23,6 @@ export interface GuitarAmpValues {
   groupLabelPosition: "top" | "bottom";
   groups: ControlGroup[];
   height: string;
+  powerSwitches: AmpPowerSwitch[];
+  powerSwitchStyle: "flat" | "round";
 }

@@ -10,6 +10,7 @@
             label="INPUT"
           ></InputJack>
         </AmpControlGroup>
+
         <AmpControlGroup
           v-for="group in values.groups"
           :hidden="false"
@@ -23,6 +24,16 @@
             :label="c.label"
             :values="values"
           ></AmpKnob>
+        </AmpControlGroup>
+
+        <AmpControlGroup :hidden="true" :values="values" label=" ">
+          <PowerSwitch
+            v-for="s in values.powerSwitches"
+            :s="s"
+            :values="values"
+            :key="s.label"
+          >
+          </PowerSwitch>
         </AmpControlGroup>
       </AmpControls>
       <CabGrill :values="values"></CabGrill>
@@ -43,22 +54,15 @@ Logo positions:
 */
 
 import { choiceItem } from "@/util";
-import makeImprovGenerators from "@/improvgrammar/makeImprovGenerators";
 import {
-  colorMap,
-  textColorMap,
-  bg2Colors,
-  bg2TextColors,
   fontSizes,
-  knobColors,
-  knobColors2,
-  knobColorsTick,
   fontFamilies,
-  colorKeys,
   ampPanelColors,
   ampPanelTextColors,
   ampKnobColors,
-  ampKnobColorsTick
+  ampKnobColorsTick,
+  ampBodyColors,
+  ampTextOnBodyColors
 } from "@/const";
 import AmpBody from "./AmpBody.vue";
 import AmpControls from "./AmpControls.vue";
@@ -66,6 +70,7 @@ import AmpControlGroup from "./AmpControlGroup.vue";
 import CabGrill from "./CabGrill.vue";
 import AmpKnob from "./AmpKnob.vue";
 import InputJack from "./InputJack.vue";
+import PowerSwitch from "./PowerSwitch.vue";
 
 export default {
   components: {
@@ -74,7 +79,8 @@ export default {
     CabGrill,
     AmpKnob,
     AmpControlGroup,
-    InputJack
+    InputJack,
+    PowerSwitch
   },
 
   props: [
@@ -90,8 +96,6 @@ export default {
     },
 
     rawStyle: function() {
-      const color = choiceItem(this.values.bgChoice, colorKeys);
-
       const font = choiceItem(this.values.fontChoice, fontFamilies);
       const fontSize = choiceItem(this.values.fontChoice, fontSizes);
 
@@ -103,8 +107,11 @@ export default {
       return `
         <style>
           .GuitarAmp#${this.ampID} {
-            --bg: ${colorMap[color]};
-            --textOnBg: ${textColorMap[color]};
+            --bg: ${choiceItem(this.values.bgChoice, ampBodyColors)};
+            --textOnBg: ${choiceItem(
+              this.values.bgChoice,
+              ampTextOnBodyColors
+            )};
             --knob: ${knobColor};
             --knobTick: ${knobColor2};
             --bg2: ${bg2};

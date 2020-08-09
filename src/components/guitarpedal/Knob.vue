@@ -1,7 +1,9 @@
 <template>
   <div class="KnobContainer">
     <div v-if="label !== '&nbsp;'" class="KnobLabel">{{ label }}</div>
-    <div v-if="label === '&nbsp;'" class="KnobLabel">&nbsp;</div>
+    <div v-if="label === '&nbsp;'" class="KnobLabel" style="visibility: hidden">
+      _
+    </div>
     <div class="Knob">
       <div class="Knob__Inner"></div>
     </div>

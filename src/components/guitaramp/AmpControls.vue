@@ -20,6 +20,8 @@ export default {
   display: flex;
   flex-direction: row;
 
+  border: 1px solid rgba(0, 0, 0, 0.5);
+
   & > * {
     margin-right: 1em;
 

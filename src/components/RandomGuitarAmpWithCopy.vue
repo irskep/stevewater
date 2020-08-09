@@ -13,12 +13,13 @@
 import { Prop, Component, Vue } from "vue-property-decorator";
 import { RNG } from "@/RNG";
 import GuitarAmp from "@/components/guitaramp/GuitarAmp.vue";
+import { GuitarAmpValues, ControlGroup } from "./guitaramp/GuitarAmpValues";
 import {
-  GuitarAmpValues,
-  ControlGroup,
-  Control
-} from "./guitaramp/GuitarAmpValues";
-import { ampKnobWords, ampKnobGroupWords } from "@/const";
+  ampKnobWords,
+  ampKnobGroupWords,
+  ampPowerColorCombos,
+  ampPowerWords
+} from "@/const";
 
 @Component({ components: { GuitarAmp } })
 export default class RandomGuitarPedalWithCopy extends Vue {
@@ -51,11 +52,13 @@ export default class RandomGuitarPedalWithCopy extends Vue {
             "switch1",
             "switch2"
           ]),
-          label: knobLabels.pop()!
+          label: knobLabels.pop() || ""
         });
       }
       groups.push(g);
     }
+
+    const powerSwitchWords = rng.shuffled(ampPowerWords);
 
     return {
       bgChoice: rng.getRandom(),
@@ -66,7 +69,12 @@ export default class RandomGuitarPedalWithCopy extends Vue {
       knobLabelPosition: rng.choice(["top", "bottom"]),
       groupLabelPosition: rng.choice(["top", "bottom"]),
       groups: groups,
-      height: rng.choice(["10em", "10em", "15em", "20em", "30em"])
+      height: rng.choice(["10em", "10em", "15em", "20em", "30em"]),
+      powerSwitches: rng.choice(ampPowerColorCombos).map((style, i) => ({
+        label: powerSwitchWords[i],
+        style: style
+      })),
+      powerSwitchStyle: rng.choice(["flat", "round"])
     };
   }
 }

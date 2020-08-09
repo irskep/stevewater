@@ -24,12 +24,25 @@ export const textColorMap = {
 
 export const colorKeys: string[] = Object.keys(colorMap).sort();
 
-export const ampPanelColors = ["#a59189", "#dcc39e", "#58341a"];
-
-export const ampPanelTextColors = ["#fff", "#000", "#fff"];
-
+export const ampBodyColors = [
+  "#111",
+  "#222",
+  "#EE5A24",
+  "#273c75",
+  "#8c7ae6",
+  "#aaa"
+];
+export const ampTextOnBodyColors = [
+  "#fff",
+  "#fff",
+  "#000",
+  "#fff",
+  "#000",
+  "#000"
+];
+export const ampPanelColors = ["#a59189", "#dcc39e", "#58341a", "#222"];
+export const ampPanelTextColors = ["#fff", "#000", "#fff", "#fff"];
 export const ampKnobColors = ["#111", "#d1d8e0"];
-
 export const ampKnobColorsTick = ["#fff", "#111"];
 
 export const knobColors = [
@@ -125,6 +138,8 @@ export const ampKnobGroupWords = [
   "AMP",
   "FX",
   "TONE",
+  "CLASSIC GAIN",
+  "ULTRA GAIN",
 
   "MUD",
   "SLUDGE",
@@ -163,7 +178,6 @@ export const ampKnobGroupWords = [
   "EVENNESS",
   "FATNESS",
   "GENTLENESS",
-  "PUNCH",
   "PURITY",
   "RESONANCE",
   "RICHNESS",
@@ -246,4 +260,17 @@ export const ampKnobWords = [
   "ROAR"
 ];
 
-export const ampSwitchWords: [string, string][] = [["LEAD", "RHYTHM"]];
+export const ampSwitchWords: [string, string][] = [
+  ["LEAD", "RHYTHM"],
+  ["HOT", "COLD"],
+  ["HARD", "SOFT"]
+];
+
+export const ampPowerWords = ["OUTPUT", "POWER", "STANDBY"];
+
+export const ampPowerColorCombos: string[][] = [
+  ["black"],
+  ["red"],
+  ["black", "black"],
+  ["red", "red"]
+];

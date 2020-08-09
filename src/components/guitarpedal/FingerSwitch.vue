@@ -1,18 +1,41 @@
 <template>
-  <div class="FingerSwitch">
-    <div v-if="label.trim() !== '&nbsp;'" class="SwitchLabel">{{ label }}</div>
-    <div v-if="label.trim() === '&nbsp;'" class="SwitchLabel">&nbsp;</div>
+  <div :class="{ FingerSwitch: true, [`m-${labelPosition}`]: true }">
+    <div
+      v-if="labelPosition === 'top' && label.trim() !== '&nbsp;'"
+      class="SwitchLabel"
+    >
+      {{ label }}
+    </div>
+    <div
+      v-if="labelPosition === 'top' && label.trim() === '&nbsp;'"
+      class="SwitchLabel"
+    >
+      &nbsp;
+    </div>
 
-    <div class="nested-hexagon-wrapper">
+    <div class="nested-hexagon-wrapper" :style="{ fontSize: size || '1em' }">
       <div class="hexagon-wrapper gray"><div class="hexagon"></div></div>
 
       <div class="bigcircle"></div>
       <div class="circle"></div>
     </div>
+
+    <div
+      v-if="labelPosition === 'bottom' && label.trim() !== '&nbsp;'"
+      class="SwitchLabel"
+    >
+      {{ label }}
+    </div>
+    <div
+      v-if="labelPosition === 'bottom' && label.trim() === '&nbsp;'"
+      class="SwitchLabel"
+    >
+      &nbsp;
+    </div>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 @media print {
   .circle,
   .bigcircle {
@@ -26,6 +49,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  &.m-bottom {
+    margin-top: 0.55em;
+  }
 }
 
 .SwitchLabel {
@@ -134,10 +161,14 @@
 
 <script>
 export default {
-  props: ["label", "appearance"],
+  props: {
+    label: { default: "" },
+    size: { default: "1em" },
+    labelPosition: { default: "top" }
+  },
 
   setup() {
     return {};
-  },
+  }
 };
 </script>
