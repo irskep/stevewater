@@ -19,6 +19,7 @@ type ModelNamePosition =
   | "cabTopRight"
   | "cabTopCenter"
   | "underControls"
+  | "inlineControlsLeft"
   | "inlineControlsRight";
 
 export interface GuitarAmpValues {

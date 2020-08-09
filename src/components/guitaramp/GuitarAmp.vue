@@ -11,6 +11,12 @@
           ></InputJack>
         </AmpControlGroup>
 
+        <ModelName
+          :hasbackground="false"
+          :values="values"
+          v-if="values.modelNamePosition === 'inlineControlsLeft'"
+        ></ModelName>
+
         <AmpControlGroup
           v-for="group in values.groups"
           :hidden="false"

@@ -89,7 +89,8 @@ export default class RandomGuitarPedalWithCopy extends Vue {
         "cabTopRight",
         "cabTopCenter",
         "underControls",
-        "inlineControlsRight"
+        "inlineControlsRight",
+        "inlineControlsLeft"
       ])
     };
   }

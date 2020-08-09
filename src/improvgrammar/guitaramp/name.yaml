@@ -11,8 +11,9 @@ basename:
   groups:
     - tags: []
       phrases:
-        - "The [:namenoun]"
-        - "The [id :namenoun]"
+        - "[:namenoun]"
+        - "[:namenoun] [:twoLetters]"
+        - "[:namenoun] [:twoLetters][#0-9]"
 
         - "[:twoLetters]"
         - "[:twoLetters]"
@@ -34,11 +35,14 @@ newname:
         - "[:basename]"
         - "[:basename] [:mark2]"
         - "[:basename] Series"
+        - "[:basename] [:mark2] Series"
         - "[:basename] Custom Series"
         - "[:basename] Classic"
         - "[:basename] Vintage"
         - "[:basename] Deluxe"
+        - "[:basename] [:mark2] Deluxe"
         - "[:basename] Reissue"
+        - "[:basename] [:mark2] Reissue"
 
 numberword:
   groups:

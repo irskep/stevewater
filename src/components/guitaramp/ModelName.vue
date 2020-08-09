@@ -40,19 +40,21 @@ export default {
     background-color: #111;
   }
 
-  &.m-inlineControlsRight {
+  &.m-inlineControlsRight,
+  &.m-inlineControlsLeft {
     padding-top: 0.5em;
     transform: rotate(-10deg);
 
     .ModelName_Brand {
       font-size: 1em;
+      color: var(--textOnBg2);
     }
 
     .ModelName_Model {
       font-size: 0.5em;
+      color: var(--textOnBg2);
     }
   }
-
   &.m-cabTopCenter {
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
