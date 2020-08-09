@@ -26,6 +26,12 @@
           ></AmpKnob>
         </AmpControlGroup>
 
+        <ModelName
+          :hasbackground="false"
+          :values="values"
+          v-if="values.modelNamePosition === 'inlineControlsRight'"
+        ></ModelName>
+
         <AmpControlGroup :hidden="true" :values="values" label=" ">
           <PowerSwitch
             v-for="s in values.powerSwitches"

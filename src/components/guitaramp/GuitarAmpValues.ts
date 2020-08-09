@@ -18,7 +18,8 @@ type ModelNamePosition =
   | "cabTopLeft"
   | "cabTopRight"
   | "cabTopCenter"
-  | "underControls";
+  | "underControls"
+  | "inlineControlsRight";
 
 export interface GuitarAmpValues {
   bgChoice: number;
@@ -29,6 +30,7 @@ export interface GuitarAmpValues {
   knobLabelPosition: "top" | "bottom";
   groupLabelPosition: "top" | "bottom";
   groups: ControlGroup[];
+  groupStyle: "brackets" | "lines";
   height: string;
   powerSwitches: AmpPowerSwitch[];
   powerSwitchStyle: "flat" | "round";

@@ -19,11 +19,38 @@ export default {
 </script>
 
 <style lang="scss">
+.ModelName_Brand {
+  font-family: var(--name-font);
+  font-size: calc(var(--name-font-size) * 2);
+  line-height: 100%;
+  color: #fff;
+}
+
+.ModelName_Model {
+  font-family: var(--name-font);
+  font-size: calc(var(--name-font-size));
+  line-height: var(--name-font-size);
+  color: #fff;
+}
+
 .ModelName {
   padding: 0.5em;
 
   &.m-background {
     background-color: #111;
+  }
+
+  &.m-inlineControlsRight {
+    padding-top: 0.5em;
+    transform: rotate(-10deg);
+
+    .ModelName_Brand {
+      font-size: 1em;
+    }
+
+    .ModelName_Model {
+      font-size: 0.5em;
+    }
   }
 
   &.m-cabTopCenter {
@@ -62,19 +89,5 @@ export default {
       -webkit-text-stroke: unset;
     }
   }
-}
-
-.ModelName_Brand {
-  font-family: var(--name-font);
-  font-size: calc(var(--name-font-size) * 2);
-  line-height: 100%;
-  color: #fff;
-}
-
-.ModelName_Model {
-  font-family: var(--name-font);
-  font-size: calc(var(--name-font-size));
-  line-height: var(--name-font-size);
-  color: #fff;
 }
 </style>
