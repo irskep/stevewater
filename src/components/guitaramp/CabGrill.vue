@@ -6,7 +6,11 @@
     <div
       :class="{
         CabGrill_Contents: true,
-        [`m-${values.modelNamePosition}`]: true
+        [`m-${
+          values.structure === 'combo'
+            ? values.modelNamePosition
+            : values.modelNamePosition2
+        }`]: true
       }"
     >
       <slot></slot>

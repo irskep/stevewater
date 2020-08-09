@@ -13,7 +13,11 @@
 import { Prop, Component, Vue } from "vue-property-decorator";
 import { RNG } from "@/RNG";
 import GuitarAmp from "@/components/guitaramp/GuitarAmp.vue";
-import { GuitarAmpValues, ControlGroup } from "./guitaramp/GuitarAmpValues";
+import {
+  GuitarAmpValues,
+  ControlGroup,
+  ModelNamePosition
+} from "./guitaramp/GuitarAmpValues";
 import {
   ampKnobWords,
   ampKnobGroupWords,
@@ -82,7 +86,27 @@ export default class RandomGuitarPedalWithCopy extends Vue {
 
     const powerSwitchWords = rng.shuffled(ampPowerWords);
 
+    const structure = rng.choice(["combo", "separate"]);
+    const modelNamePosition =
+      structure === "combo"
+        ? rng.choice([
+            "cabCenter",
+            "cabTopLeft",
+            "cabTopRight",
+            "cabTopCenter",
+            "underControls",
+            "inlineControlsRight",
+            "inlineControlsLeft"
+          ])
+        : rng.choice([
+            "cabTopLeft",
+            "cabTopRight",
+            "inlineControlsRight",
+            "inlineControlsLeft"
+          ]);
+
     return {
+      structure: structure as "combo" | "separate",
       bgChoice: rng.getRandom(),
       bg2Choice: rng.getRandom(),
       fontChoice: rng.getRandom(),
@@ -100,14 +124,13 @@ export default class RandomGuitarPedalWithCopy extends Vue {
       powerSwitchStyle: rng.choice(["flat", "round"]),
       brandName: rng.choice(ampBrandNames),
       modelName: ampGen.gen("ampname", {}),
-      modelNamePosition: rng.choice([
+      modelNamePosition: modelNamePosition as ModelNamePosition,
+      // FYI not actually used right now
+      modelNamePosition2: rng.choice([
         "cabCenter",
         "cabTopLeft",
         "cabTopRight",
-        "cabTopCenter",
-        "underControls",
-        "inlineControlsRight",
-        "inlineControlsLeft"
+        "cabTopCenter"
       ])
     };
   }

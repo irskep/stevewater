@@ -4,7 +4,7 @@
     :class="{
       ModelName: true,
       'm-background': hasbackground,
-      [`m-${values.modelNamePosition}`]: true
+      [`m-${position}`]: true
     }"
   >
     <div class="ModelName_Brand">{{ values.brandName }}</div>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  props: { values: {}, hasbackground: { default: true } }
+  props: { values: {}, hasbackground: { default: true }, position: {} }
 };
 </script>
 

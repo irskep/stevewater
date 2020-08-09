@@ -13,7 +13,7 @@ export interface AmpPowerSwitch {
   style: string;
 }
 
-type ModelNamePosition =
+export type ModelNamePosition =
   | "cabCenter"
   | "cabTopLeft"
   | "cabTopRight"
@@ -23,6 +23,7 @@ type ModelNamePosition =
   | "inlineControlsRight";
 
 export interface GuitarAmpValues {
+  structure: "combo" | "separate";
   bgChoice: number;
   bg2Choice: number;
   fontChoice: number;
@@ -38,4 +39,5 @@ export interface GuitarAmpValues {
   brandName: string;
   modelName: string;
   modelNamePosition: ModelNamePosition;
+  modelNamePosition2: ModelNamePosition;
 }

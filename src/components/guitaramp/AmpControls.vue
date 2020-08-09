@@ -1,12 +1,60 @@
 <template>
   <div class="AmpControls">
-    <slot></slot>
+    <AmpControlGroup :numControls="1" :hidden="true" :values="values" label=" ">
+      <InputJack :values="values" appearance="hex" label="INPUT"></InputJack>
+    </AmpControlGroup>
+
+    <ModelName
+      :position="values.modelNamePosition"
+      :hasbackground="false"
+      :values="values"
+      v-if="values.modelNamePosition === 'inlineControlsLeft'"
+    ></ModelName>
+
+    <AmpControlGroup
+      v-for="group in values.groups"
+      :hidden="false"
+      :numControls="group.controls.length"
+      :values="values"
+      :key="group.label"
+      :label="group.label"
+    >
+      <AmpKnob
+        v-for="c in group.controls"
+        :key="c.label"
+        :label="c.label"
+        :values="values"
+      ></AmpKnob>
+    </AmpControlGroup>
+
+    <ModelName
+      :position="values.modelNamePosition"
+      :hasbackground="false"
+      :values="values"
+      v-if="values.modelNamePosition === 'inlineControlsRight'"
+    ></ModelName>
+
+    <AmpControlGroup :numControls="1" :hidden="true" :values="values" label=" ">
+      <PowerSwitch
+        v-for="s in values.powerSwitches"
+        :s="s"
+        :values="values"
+        :key="s.label"
+      >
+      </PowerSwitch>
+    </AmpControlGroup>
   </div>
 </template>
 
 <script>
+import AmpControlGroup from "./AmpControlGroup.vue";
+import AmpKnob from "./AmpKnob.vue";
+import InputJack from "./InputJack.vue";
+import PowerSwitch from "./PowerSwitch.vue";
+import ModelName from "./ModelName.vue";
+
 export default {
-  components: {},
+  components: { AmpControlGroup, AmpKnob, InputJack, PowerSwitch, ModelName },
   props: ["values"]
 };
 </script>

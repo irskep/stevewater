@@ -1,77 +1,47 @@
 <template>
   <div class="GuitarAmp" v-bind:id="ampID">
     <div v-html="rawStyle"></div>
+    <AmpBody v-if="values.structure === 'separate'">
+      <AmpControls :values="values"> </AmpControls>
+      <ModelName
+        v-if="values.modelNamePosition.slice(0, 6) !== 'inline'"
+        :hasbackground="false"
+        :values="values"
+        :position="values.modelNamePosition"
+      ></ModelName>
+    </AmpBody>
+
     <AmpBody>
-      <AmpControls :values="values">
-        <AmpControlGroup
-          :numControls="1"
-          :hidden="true"
-          :values="values"
-          label=" "
-        >
-          <InputJack
-            :values="values"
-            appearance="hex"
-            label="INPUT"
-          ></InputJack>
-        </AmpControlGroup>
-
-        <ModelName
-          :hasbackground="false"
-          :values="values"
-          v-if="values.modelNamePosition === 'inlineControlsLeft'"
-        ></ModelName>
-
-        <AmpControlGroup
-          v-for="group in values.groups"
-          :hidden="false"
-          :numControls="group.controls.length"
-          :values="values"
-          :key="group.label"
-          :label="group.label"
-        >
-          <AmpKnob
-            v-for="c in group.controls"
-            :key="c.label"
-            :label="c.label"
-            :values="values"
-          ></AmpKnob>
-        </AmpControlGroup>
-
-        <ModelName
-          :hasbackground="false"
-          :values="values"
-          v-if="values.modelNamePosition === 'inlineControlsRight'"
-        ></ModelName>
-
-        <AmpControlGroup
-          :numControls="1"
-          :hidden="true"
-          :values="values"
-          label=" "
-        >
-          <PowerSwitch
-            v-for="s in values.powerSwitches"
-            :s="s"
-            :values="values"
-            :key="s.label"
-          >
-          </PowerSwitch>
-        </AmpControlGroup>
+      <AmpControls :values="values" v-if="values.structure === 'combo'">
       </AmpControls>
 
-      <div class="ControlCabSpacer"></div>
+      <div class="ControlCabSpacer" v-if="values.structure === 'combo'"></div>
 
       <div
-        v-if="values.modelNamePosition === 'underControls'"
+        v-if="
+          values.modelNamePosition === 'underControls' &&
+            values.structure === 'combo'
+        "
         class="ModelNameContainer"
       >
-        <ModelName :hasbackground="false" :values="values"></ModelName>
+        <ModelName
+          :hasbackground="false"
+          :values="values"
+          :position="values.modelNamePosition"
+        ></ModelName>
       </div>
 
       <CabGrill :values="values">
         <ModelName
-          v-if="values.modelNamePosition.slice(0, 3) === 'cab'"
+          v-if="
+            values.structure === 'combo' &&
+              values.modelNamePosition.slice(0, 3) === 'cab'
+          "
+          :position="
+            values.structure === 'separate'
+              ? values.modelNamePosition2
+              : values.modelNamePosition
+          "
           :values="values"
         ></ModelName>
       </CabGrill>
@@ -106,11 +76,7 @@ import {
 import AmpBody from "./AmpBody.vue";
 import AmpFeet from "./AmpFeet.vue";
 import AmpControls from "./AmpControls.vue";
-import AmpControlGroup from "./AmpControlGroup.vue";
 import CabGrill from "./CabGrill.vue";
-import AmpKnob from "./AmpKnob.vue";
-import InputJack from "./InputJack.vue";
-import PowerSwitch from "./PowerSwitch.vue";
 import ModelName from "./ModelName.vue";
 
 export default {
@@ -119,10 +85,6 @@ export default {
     AmpFeet,
     AmpControls,
     CabGrill,
-    AmpKnob,
-    AmpControlGroup,
-    InputJack,
-    PowerSwitch,
     ModelName
   },
 
