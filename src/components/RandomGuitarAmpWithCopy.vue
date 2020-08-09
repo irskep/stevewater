@@ -42,7 +42,24 @@ export default class RandomGuitarPedalWithCopy extends Vue {
     const groups: ControlGroup[] = [];
     let totalControls = 0;
     for (let i = 0; i < numGroups; i++) {
-      const numControls = rng.choice([1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6]);
+      const numControls = rng.choice([
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6
+      ]);
       totalControls += numControls;
       const g: ControlGroup = { label: groupLabels[i], controls: [] };
       for (let j = 0; j < numControls; j++) {
