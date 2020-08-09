@@ -274,3 +274,19 @@ export const ampPowerColorCombos: string[][] = [
   ["black", "black"],
   ["red", "red"]
 ];
+
+export const ampBrandNames = [
+  "Plateau",
+  "Herschel",
+  "Tender",
+  "Box",
+  "Blue",
+  "Blackhole",
+  "BOBB",
+  "Rollout",
+  "Knitter",
+  "Supertone",
+  "Dr. X",
+  "Wagner",
+  "harmo-electrix"
+];

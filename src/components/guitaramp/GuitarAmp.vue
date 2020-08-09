@@ -36,7 +36,15 @@
           </PowerSwitch>
         </AmpControlGroup>
       </AmpControls>
-      <CabGrill :values="values"></CabGrill>
+
+      <div class="ControlCabSpacer"></div>
+
+      <CabGrill :values="values">
+        <ModelName
+          v-if="values.modelNamePosition.slice(0, 3) === 'cab'"
+          :values="values"
+        ></ModelName>
+      </CabGrill>
     </AmpBody>
   </div>
 </template>
@@ -71,6 +79,7 @@ import CabGrill from "./CabGrill.vue";
 import AmpKnob from "./AmpKnob.vue";
 import InputJack from "./InputJack.vue";
 import PowerSwitch from "./PowerSwitch.vue";
+import ModelName from "./ModelName.vue";
 
 export default {
   components: {
@@ -80,7 +89,8 @@ export default {
     AmpKnob,
     AmpControlGroup,
     InputJack,
-    PowerSwitch
+    PowerSwitch,
+    ModelName
   },
 
   props: [
@@ -127,4 +137,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.ControlCabSpacer {
+  height: 0.5em;
+}
+</style>

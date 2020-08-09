@@ -13,16 +13,25 @@ export interface AmpPowerSwitch {
   style: string;
 }
 
+type ModelNamePosition =
+  | "cabCenter"
+  | "cabTopLeft"
+  | "cabTopRight"
+  | "cabTopCenter";
+
 export interface GuitarAmpValues {
   bgChoice: number;
   bg2Choice: number;
   fontChoice: number;
   knobChoice: number;
-  grillStyle: "grid" | "crosshatch"; // | "crosshatch2" | "grid2";
+  grillStyle: "grid" | "crosshatch" | "crosshatch2" | "grid2";
   knobLabelPosition: "top" | "bottom";
   groupLabelPosition: "top" | "bottom";
   groups: ControlGroup[];
   height: string;
   powerSwitches: AmpPowerSwitch[];
   powerSwitchStyle: "flat" | "round";
+  brandName: string;
+  modelName: string;
+  modelNamePosition: ModelNamePosition;
 }

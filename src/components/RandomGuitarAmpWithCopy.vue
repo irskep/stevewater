@@ -18,7 +18,8 @@ import {
   ampKnobWords,
   ampKnobGroupWords,
   ampPowerColorCombos,
-  ampPowerWords
+  ampPowerWords,
+  ampBrandNames
 } from "@/const";
 
 @Component({ components: { GuitarAmp } })
@@ -65,7 +66,7 @@ export default class RandomGuitarPedalWithCopy extends Vue {
       bg2Choice: rng.getRandom(),
       fontChoice: rng.getRandom(),
       knobChoice: rng.getRandom(),
-      grillStyle: rng.choice(["grid", "crosshatch"]),
+      grillStyle: rng.choice(["grid", "crosshatch", "crosshatch2", "grid2"]),
       knobLabelPosition: rng.choice(["top", "bottom"]),
       groupLabelPosition: rng.choice(["top", "bottom"]),
       groups: groups,
@@ -74,7 +75,15 @@ export default class RandomGuitarPedalWithCopy extends Vue {
         label: powerSwitchWords[i],
         style: style
       })),
-      powerSwitchStyle: rng.choice(["flat", "round"])
+      powerSwitchStyle: rng.choice(["flat", "round"]),
+      brandName: rng.choice(ampBrandNames),
+      modelName: "AMP",
+      modelNamePosition: rng.choice([
+        "cabCenter",
+        "cabTopLeft",
+        "cabTopRight",
+        "cabTopCenter"
+      ])
     };
   }
 }
