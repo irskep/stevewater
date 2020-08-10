@@ -9,4 +9,5 @@ export default function(
   subGen: Improv;
   pedalWordsGen: Improv;
   ampGen: Improv;
+  bioGen: Improv;
 };

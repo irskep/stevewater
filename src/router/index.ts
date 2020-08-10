@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from "vue-router";
 import Home from "@/views/Home.vue";
 import GuitarPedal from "@/views/GuitarPedal.vue";
 import Amp from "@/views/Amp.vue";
+import Bio from "@/views/Bio.vue";
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,18 @@ const routes: Array<RouteConfig> = [
     path: "/amp/:seed",
     name: "Amp",
     component: Amp,
+    props: route => ({ seed: route.params.seed || `${Date.now()}` })
+  },
+  {
+    path: "/bio/random",
+    name: "Random Bio",
+    component: Bio,
+    props: () => ({ seed: `${Date.now()}` })
+  },
+  {
+    path: "/bio/:seed",
+    name: "Bio",
+    component: Bio,
     props: route => ({ seed: route.params.seed || `${Date.now()}` })
   }
 ];

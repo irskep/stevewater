@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link>
       <router-link :to="`/amp/${Date.now()}`">Amp</router-link>
       <router-link :to="`/guitarpedal/${Date.now()}`">Guitar Pedal</router-link>
+      <router-link :to="`/bio/${Date.now()}`">Band Bio</router-link>
     </nav>
     <router-view />
   </main>

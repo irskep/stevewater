@@ -1,6 +1,7 @@
 import Improv from "improv";
 import pedalGrammar from "@/improvgrammar/guitarpedal/all";
 import ampGrammar from "@/improvgrammar/guitaramp/all";
+import bioGrammar from "@/improvgrammar/band/all";
 
 // const usedSymbols = {};
 // function uniquify(grammar) {
@@ -40,13 +41,19 @@ function dryness() {
       return 0;
     }
 
-    const newPhrases = group.phrases.filter(phrase => {
-      if (!phrase) return true;
-      return this.history.indexOf(phrase) === -1;
-    });
-    const newGroup = Object.create(group);
-    newGroup.phrases = newPhrases;
-    return [0, newGroup];
+    try {
+      const newPhrases = group.phrases.filter(phrase => {
+        if (!phrase) return true;
+        return this.history.indexOf(phrase) === -1;
+      });
+      const newGroup = Object.create(group);
+      newGroup.phrases = newPhrases;
+      return [0, newGroup];
+    } catch (e) {
+      console.error(e);
+      debugger;
+      throw e;
+    }
   };
 }
 
@@ -145,5 +152,19 @@ export default function makeImprovGenerators(alea) {
     rng: alea
   });
 
-  return { descGen, subGen, pedalWordsGen, ampGen };
+  const bioGen = new Improv(Object.assign({}, bioGrammar), {
+    filters: [
+      Improv.filters.mismatchFilter(),
+      Improv.filters.partialBonus(),
+      Improv.filters.fullBonus(),
+      dryness()
+    ],
+    builtins,
+    reincorporate: true,
+    // audit: true,
+    persistence: false,
+    rng: alea
+  });
+
+  return { descGen, subGen, pedalWordsGen, ampGen, bioGen };
 }

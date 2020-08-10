@@ -31,10 +31,6 @@ import makeImprovGenerators from "@/improvgrammar/makeImprovGenerators";
 export default class RandomGuitarPedalWithCopy extends Vue {
   @Prop() private seed!: string;
 
-  mounted() {
-    console.log(this.seed);
-  }
-
   ampValues(): GuitarAmpValues {
     const rng = new RNG(this.seed);
     const { ampGen } = makeImprovGenerators(rng.getRandom);

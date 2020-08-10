@@ -1,0 +1,255 @@
+bandname:
+  bind: true
+  groups:
+    - tags: []
+      phrases: ["Quick Fiction"]
+
+member1:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - "[:firstname] [:lastname]"
+
+member2:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - "[id :firstname] [:lastname]"
+
+member3:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - "[id id :firstname] [:lastname]"
+
+member4:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - "[id id id :firstname] [:lastname]"
+
+member5:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - "[id id id id :firstname] [:lastname]"
+
+bio:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - >-
+          [:bandname] [:comesfrom] [:location]. [:Singer] [:member1] [:met]
+          [:drummer] [:member5] [:meetingclause]. [cap :meetingclause], they [:met]
+          [:member2], who quickly joined the group. The three of them started
+          writing, and once they had a few songs, [:member5] found [:member3]
+          [:meetingclause]. Finally, they [:meetingstart] and [:member4] joined the
+          group.
+
+
+          [:musicbio]
+
+musicbio:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - >-
+          At once [:musicdesc] and [:musicdesc], [:bandname]’s [:musicdesc] music will keep you [:audiencestate].
+
+# JOINERS
+
+comesfrom:
+  groups:
+    - tags: []
+      phrases:
+        - "hails from"
+        - "comes from"
+        - "is from"
+
+met:
+  groups:
+    - tags: []
+      phrases:
+        - "met"
+        - "befriended"
+        - "got to know"
+        - "found out about"
+        - "connected with"
+
+# LOCATION
+
+location:
+  groups:
+    - tags: []
+      phrases:
+        - "[:communitydesc] music community of [:city]"
+
+communitydesc:
+  groups:
+    - tags: []
+      phrases:
+        - "the [:communityadj] and [:communityadj]"
+        - "the [:communityadj], [:communityadj]"
+        - "the [:communityadj]"
+
+musicdesc:
+  groups:
+    - tags: []
+      phrases:
+        - "futuristic"
+        - "of the moment"
+        - "loud"
+        - mellow
+        - warm
+        - ear-catching
+        - lush
+        - rich
+        - grungy
+        - gritty
+        - smooth
+        - clean
+        - dirty
+        - chunky
+        - spacey
+        - ratty
+        - punchy
+        - meaty
+        - thick
+        - crunchy
+        - harmonically rich
+        - airy
+        - big
+        - boomy
+        - brassy
+        - breathy
+        - bright
+        - brilliant
+        - cheerful
+        - cool
+        - crisp
+        - dark
+        - deep
+        - delicate
+        - dense
+        - detailed
+        - dynamic
+        - edgy
+        - empty
+        - even
+        - friendly
+        - full-bodied
+        - gentle
+        - harsh
+        - hazy
+        - heavy
+        - hollow
+        - intimate
+        - light
+        - loud
+        - lyrical
+        - massive
+        - pretty
+        - raspy
+        - resonant
+        - reverberant
+        - spacious
+        - tense
+        - thick
+        - thin
+        - tight
+        - velvety
+        - volatile
+        - well-defined
+        - wild
+
+communityadj:
+  groups:
+    - tags: []
+      phrases:
+        - "vibrant"
+        - "deeply collaborative"
+
+city:
+  groups:
+    - tags: []
+      phrases:
+        - "Cleveland, Ohio"
+        - "Cincinnati, Ohio"
+        - "Columbus, Ohio"
+        - "Akron, Ohio"
+        - "Youngstown, Ohio"
+        - "Boulder, Colorado"
+        - "San Francisco, California"
+        - "Pittsburgh, Pennsylvania"
+        - "Boston, Massachusetts"
+        - "London, England"
+        - "Boise, Idaho"
+
+# ROLES
+
+Singer:
+  groups:
+    - tags: []
+      phrases:
+        - Singer
+        - "Lead vocalist"
+        - "Mouth noise maker"
+        - "Chief shouter"
+        - "Head warbler"
+
+drummer:
+  groups:
+    - tags: []
+      phrases:
+        - drummer
+        - "drum virtuoso"
+        - "drum boy"
+
+# SITUATIONS
+
+meetingclause:
+  groups:
+    - tags: []
+      phrases:
+        - "in a bar where they had been stood up for dates"
+        - "while they were going to college in [:city]"
+        - "at a show where they shared the bill playing with different bands"
+        - "at church"
+        - "at a wedding where they were filling in for members of the band who had contracted food poisoning"
+        - "at a high school reunion"
+        - "after a long search on Craigslist"
+        - "through a mutual friend"
+
+meetingstart:
+  groups:
+    - tags: []
+      phrases:
+        - "posted an ad in the newspaper"
+        - "really blew up on Twitter"
+        - "wished really hard"
+        - "prayed to the Angel of Rock"
+        - "posted on Craigslist"
+        - "put a call out in the local community"
+        - "connected to a bunch of people on LinkedIn"
+
+audiencestate:
+  groups:
+    - tags: []
+      phrases:
+        - "on your feet"
+        - "shaking your booty"
+        - "sitting pensively in a comfortable chair"
+        - "staring distantly at the wall"
+        - "pumping your fist"
+        - "tapping your foot"
+        - "raging against The Man"
+        - "kind of nodding your head a bit"
+        - "literally jumping up and down"
+        - "curled up on the floor, crying uncontrollably"
