@@ -45,11 +45,24 @@ bio:
     - tags: []
       phrases:
         - >-
+          ### About [:bandname]
+
+          **Vocals**: [:member1]
+
+          **Guitar**: [:member2]
+
+          **Guitar**: [:member3]
+
+          **Bass**: [:member4]
+
+          **Drums**: [:member5]
+
+
           [:bandname] [:comesfrom] [:location]. [:Singer] [:member1] [:met]
           [:drummer] [:member5] [:meetingclause]. [cap :meetingclause], they [:met]
-          [:member2], who quickly joined the group. The three of them started
-          writing, and once they had a few songs, [:member5] found [:member3]
-          [:meetingclause]. Finally, they [:meetingstart] and [:member4] joined the
+          [:guitarist] [:member2], who quickly joined the group. The three of them started
+          writing, and once they had a few songs, [:member5] found [:guitarist] [:member3]
+          [:meetingclause]. Finally, they [:meetingstart] and [:bassist] [:member4] joined the
           group.
 
 
@@ -211,6 +224,28 @@ drummer:
         - drummer
         - "drum virtuoso"
         - "drum boy"
+
+guitarist:
+  groups:
+    - tags: []
+      phrases:
+        - "guitarist"
+        - "weedly-weedler"
+        - "guitar guy"
+        - "guitar chap"
+        - "guitar fellow"
+        - "guitar player"
+        - "six-stringed-instrument-player"
+
+bassist:
+  groups:
+    - tags: []
+      phrases:
+        - "bassist"
+        - "bassline expert"
+        - "low note player"
+        - "bass guitarist"
+        - "bass player"
 
 # SITUATIONS
 
