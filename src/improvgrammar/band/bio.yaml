@@ -46,6 +46,20 @@ member6:
       phrases:
         - "[id id id id id :firstname] [:lastname]"
 
+member7:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - "[id id id id id id :firstname] [:lastname]"
+
+member8:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - "[id id id id id id id :firstname] [:lastname]"
+
 bio:
   bind: true
   groups:
@@ -78,6 +92,11 @@ musicbio:
         - >-
           At once [:musicdesc] and [:musicdesc], [:bandname]’s [:musicdesc] music will keep you [:audiencestate].
 
+        - >-
+          [:musicdesc] and [:musicdesc], [:bandname]’s [:musicdesc] music will keep you [:audiencestate].
+
+        - >-
+          [:bandname] is sure to keep you [:audiencestate] with its [:musicdesc], [:musicdesc] music.
 howtheymet:
   bind: true
   groups:
@@ -93,14 +112,15 @@ howtheymet:
 
         - >-
           [:bandname] [:comesfrom] [:location]. [:Singer] [:member1] [:met]
-          [:drummer] [:member5] [:meetingclause]. [cap :meetingclause], they [:met]
+          [:drummer] [:member7] [:meetingclause]. [cap :meetingclause], they [:met]
           [:guitarist] [:member6], who quickly joined the group. The three of them started
           writing, and once they had a few songs, [:member5] found [:guitarist] [:member3]
           [:meetingclause]. Finally, they [:meetingstart] and [:bassist] [:member4] joined the
-          group. But then [:member6] left, and they brought on [:member2].
+          group. But then [:member6] left, and they brought on [:member2], and [:member7] left, and they found [:member5] to replace him.
 
         - >-
-          The five members of [:bandname] met in [:location] [:meetingclause].
+          The five members of [:bandname] met in [:location] [:meetingclause]. They 
+          quickly found themselves [:livingtogether], and set to [:writingsongs].
 
 # JOINERS
 
@@ -303,6 +323,8 @@ meetingclause:
         - "at a high school reunion"
         - "after a long search on Craigslist"
         - "through a mutual friend"
+        - "on a semi-pro frisbee team"
+        - "in a remedial cooking class"
 
 meetingstart:
   groups:
@@ -329,4 +351,31 @@ audiencestate:
         - "raging against The Man"
         - "kind of nodding your head a bit"
         - "literally jumping up and down"
+        - "singing along no matter who’s listening"
         - "curled up on the floor, crying uncontrollably"
+
+livingtogether:
+  groups:
+    - tags: []
+      phrases:
+        - "sharing a studio apartment"
+        - "sharing a rented house"
+        - "sharing a multipurpose art space"
+        - "playing Counterstrike every weekend"
+
+writingsongs:
+  groups:
+    - tags: []
+      phrases:
+        - "writing an album’s worth of songs"
+        - "getting their jam on"
+        - "putting together some sweet tunes"
+
+thingsweregoingwell:
+  groups:
+    - tags: []
+      phrases:
+        - "The creative juice was flowing"
+        - "They were getting lots of buzz on Google Buzz"
+        - "They jelled like no band had ever jelled before"
+        - ""
