@@ -103,6 +103,19 @@ location:
     - tags: []
       phrases:
         - "[:communitydesc] music community of [:city]"
+        - "[:citydesc] [:city]"
+
+citydesc:
+  groups:
+    - tags: []
+      phrases:
+        - "the dense heat of"
+        - "idyllic"
+        - "the deserts around"
+        - "deep in the forests of"
+        - "the heart of"
+        - "the outskirts of"
+        - "a suburb of"
 
 communitydesc:
   groups:
@@ -198,6 +211,9 @@ city:
         - "Columbus, Ohio"
         - "Akron, Ohio"
         - "Youngstown, Ohio"
+        - "Toledo, Ohio"
+        - "Dayton, Ohio"
+        - "Canton, Ohio"
         - "Boulder, Colorado"
         - "San Francisco, California"
         - "Pittsburgh, Pennsylvania"
