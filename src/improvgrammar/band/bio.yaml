@@ -39,6 +39,13 @@ member5:
       phrases:
         - "[id id id id :firstname] [:lastname]"
 
+member6:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - "[id id id id id :firstname] [:lastname]"
+
 bio:
   bind: true
   groups:
@@ -58,12 +65,7 @@ bio:
           **Drums**: [:member5]
 
 
-          [:bandname] [:comesfrom] [:location]. [:Singer] [:member1] [:met]
-          [:drummer] [:member5] [:meetingclause]. [cap :meetingclause], they [:met]
-          [:guitarist] [:member2], who quickly joined the group. The three of them started
-          writing, and once they had a few songs, [:member5] found [:guitarist] [:member3]
-          [:meetingclause]. Finally, they [:meetingstart] and [:bassist] [:member4] joined the
-          group.
+          [:howtheymet]
 
 
           [:musicbio]
@@ -75,6 +77,30 @@ musicbio:
       phrases:
         - >-
           At once [:musicdesc] and [:musicdesc], [:bandname]’s [:musicdesc] music will keep you [:audiencestate].
+
+howtheymet:
+  bind: true
+  groups:
+    - tags: []
+      phrases:
+        - >-
+          [:bandname] [:comesfrom] [:location]. [:Singer] [:member1] [:met]
+          [:drummer] [:member5] [:meetingclause]. [cap :meetingclause], they [:met]
+          [:guitarist] [:member2], who quickly joined the group. The three of them started
+          writing, and once they had a few songs, [:member5] found [:guitarist] [:member3]
+          [:meetingclause]. Finally, they [:meetingstart] and [:bassist] [:member4] joined the
+          group.
+
+        - >-
+          [:bandname] [:comesfrom] [:location]. [:Singer] [:member1] [:met]
+          [:drummer] [:member5] [:meetingclause]. [cap :meetingclause], they [:met]
+          [:guitarist] [:member6], who quickly joined the group. The three of them started
+          writing, and once they had a few songs, [:member5] found [:guitarist] [:member3]
+          [:meetingclause]. Finally, they [:meetingstart] and [:bassist] [:member4] joined the
+          group. But then [:member6] left, and they brought on [:member2].
+
+        - >-
+          The five members of [:bandname] met in [:location] [:meetingclause].
 
 # JOINERS
 
