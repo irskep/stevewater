@@ -97,6 +97,26 @@ musicbio:
 
         - >-
           [:bandname] is sure to keep you [:audiencestate] with its [:musicdesc], [:musicdesc] music.
+
+        - >-
+          [:bandname], like no other, has managed to [:createamusicalcosmos].
+
+createamusicalcosmos:
+  groups:
+    - tags: []
+      phrases:
+        - "create a musical cosmos"
+        - "create a universe of musical possibilities"
+        - "define a genre"
+        - "redefine what it means to be human"
+        - "put the superstars of the past to shame"
+        - "open the hearts of the world to love and peace"
+        - "claim the souls of millions"
+        - "have their cake and eat it too"
+        - "capture the attention of the free world"
+        - "rock harder than anyone has ever rocked before"
+        - "get great returns on their musical investments"
+
 howtheymet:
   bind: true
   groups:
@@ -122,6 +142,11 @@ howtheymet:
           The five members of [:bandname] met in [:location] [:meetingclause]. They 
           quickly found themselves [:livingtogether], and set to [:writingsongs].
 
+        - >-
+          Hailed as “[:artistictitle]” by _[:publication]_ and “[:artistictitle]” by 
+          _[:publication]_, [:member1] and the rest of [:bandname] [:allmet] in [:city].
+          [:thingsweregoingwell], and after [:writingsongs], they [:didathing].
+
 # JOINERS
 
 comesfrom:
@@ -141,6 +166,18 @@ met:
         - "got to know"
         - "found out about"
         - "connected with"
+
+allmet:
+  groups:
+    - tags: []
+      phrases:
+        - "met"
+        - "befriended each other"
+        - "got to know each other"
+        - "found out about each other"
+        - "connected with each other"
+        - "got together"
+        - "grew up together"
 
 # LOCATION
 
@@ -162,6 +199,7 @@ citydesc:
         - "the heart of"
         - "the outskirts of"
         - "a suburb of"
+        - "the office complexes of"
 
 communitydesc:
   groups:
@@ -247,6 +285,12 @@ communityadj:
       phrases:
         - "vibrant"
         - "deeply collaborative"
+        - "tight-laced"
+        - "activist"
+        - "supportive"
+        - "idiosyncratic"
+        - "oddball"
+        - "rough"
 
 city:
   groups:
@@ -286,6 +330,7 @@ drummer:
         - drummer
         - "drum virtuoso"
         - "drum boy"
+        - "percussionist"
 
 guitarist:
   groups:
@@ -308,6 +353,7 @@ bassist:
         - "low note player"
         - "bass guitarist"
         - "bass player"
+        - "four-stringed-instrument player"
 
 # SITUATIONS
 
@@ -325,6 +371,7 @@ meetingclause:
         - "through a mutual friend"
         - "on a semi-pro frisbee team"
         - "in a remedial cooking class"
+        - "as coworkers at a data-driven finance firm"
 
 meetingstart:
   groups:
@@ -353,6 +400,7 @@ audiencestate:
         - "literally jumping up and down"
         - "singing along no matter who’s listening"
         - "curled up on the floor, crying uncontrollably"
+        - "chilling out while you relax and study"
 
 livingtogether:
   groups:
@@ -362,6 +410,7 @@ livingtogether:
         - "sharing a rented house"
         - "sharing a multipurpose art space"
         - "playing Counterstrike every weekend"
+        - "crunching spreadsheets together"
 
 writingsongs:
   groups:
@@ -370,6 +419,7 @@ writingsongs:
         - "writing an album’s worth of songs"
         - "getting their jam on"
         - "putting together some sweet tunes"
+        - "noodling around a bit and not really getting anywhere"
 
 thingsweregoingwell:
   groups:
@@ -378,4 +428,134 @@ thingsweregoingwell:
         - "The creative juice was flowing"
         - "They were getting lots of buzz on Google Buzz"
         - "They jelled like no band had ever jelled before"
-        - ""
+        - "They made a huge impact on the local scene"
+        - "They were crushing their KPIs"
+
+didathing:
+  groups:
+    - tags: []
+      phrases:
+        - "embarked on a national tour"
+        - "went into the studio to record"
+        - "hopped into a rented van for a regional tour"
+        - "began streaming regularly on Facebook Live to audiences of [:audiencesize]"
+
+audiencesize:
+  groups:
+    - tags: []
+      phrases:
+        - "dozens"
+        - "hundreds"
+        - "thousands"
+        - "millions"
+        - "exact multiples of 17"
+
+### PUBLICATION
+
+publication:
+  groups:
+    - tags: []
+      phrases:
+        - "[:publication1] [:weekly]"
+        - "[:publication1]"
+
+publication1:
+  groups:
+    - tags: []
+      phrases:
+        - "Music"
+        - "Groove"
+        - "Jingle"
+        - "Vinyl"
+        - "Tape"
+        - "Playback"
+        - "Review"
+
+weekly:
+  groups:
+    - tags: []
+      phrases:
+        - "Daily"
+        - "Weekly"
+        - "Chronicle"
+        - "Zine"
+        - "Magazine"
+        - "Blog"
+        - "News"
+
+artistictitle:
+  groups:
+    - tags: []
+      phrases:
+        - "the [:artistictitleadj] [:king] of [:city]"
+        - "the [:king] of [:musicnoun]"
+
+artistictitleadj:
+  groups:
+    - tags: []
+      phrases:
+        - "art star"
+        - "grunge rock"
+        - "R&B"
+        - "rock star"
+        - "finger-picking"
+        - "shred"
+
+king:
+  groups:
+    - tags: []
+      phrases:
+        - "queen"
+        - "king"
+        - "czar"
+        - "god"
+        - "demigod"
+        - "spirit"
+
+musicnoun:
+  groups:
+    - tags: []
+      phrases:
+        - "mud"
+        - "sludge"
+        - "bite"
+        - "grit"
+        - "distortion"
+        - "sweetness"
+        - "harshness"
+        - "mellowness"
+        - "warmth"
+        - "coldness"
+        - "note definition"
+        - "control"
+        - "smoothness"
+        - "grit"
+        - "edge"
+        - "crunchy breakup"
+        - "searing solo power"
+        - "sweetening"
+        - "indefinable mojo"
+        - "dirt"
+        - "space"
+        - "punch"
+        - "thickness"
+        - "musicality"
+        - "harmonics"
+        - "balance"
+        - "brilliance"
+        - "darkness"
+        - "deepness"
+        - "detail"
+        - "distance"
+        - "dryness"
+        - "dynamics"
+        - "evenness"
+        - "fatness"
+        - "gentleness"
+        - "purity"
+        - "resonance"
+        - "richness"
+        - "saturation"
+        - "wetness"
+        - "purr"
+        - "roar"
