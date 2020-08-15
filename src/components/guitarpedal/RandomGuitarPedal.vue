@@ -11,15 +11,13 @@
 
 <script>
 import Alea from "alea";
-import { ref, computed, onMounted, onBeforeUpdate } from "@vue/composition-api";
-
 import GuitarPedal from "./GuitarPedal.vue";
 
 import makeImprovGenerators from "@/improvgrammar/makeImprovGenerators";
 
 export default {
   components: {
-    GuitarPedal,
+    GuitarPedal
   },
 
   props: ["seed", "bindings", "tags"],
@@ -33,7 +31,7 @@ export default {
       const { descGen, subGen } = makeImprovGenerators(alea);
       const model = {
         bindings: this.$props.bindings || [],
-        tags: this.$props.tags || [],
+        tags: this.$props.tags || []
       };
       const name = descGen.gen("name", model);
       const subtitle = subGen.gen("subtitle", model);
@@ -47,8 +45,8 @@ export default {
         brand,
         purpose: subGen.gen("purpose", model),
         color: descGen.gen("color", model).toLowerCase(),
-        texts: desc.split("\n\n").filter((s) => s),
-        price: descGen.gen("price", model),
+        texts: desc.split("\n\n").filter(s => s),
+        price: descGen.gen("price", model)
       };
       return { aleaSavedState, pedal };
     },
@@ -57,7 +55,7 @@ export default {
     },
     aleaSavedState: function() {
       return this.context.aleaSavedState;
-    },
-  },
+    }
+  }
 };
 </script>

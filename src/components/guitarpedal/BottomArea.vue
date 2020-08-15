@@ -1,6 +1,5 @@
 <template>
   <div class="BottomArea">
-
     <div v-if="footConfig === 'Pusher'">
       <div class="NameContainer">
         <div class="Name">
@@ -17,17 +16,22 @@
     </div>
 
     <div v-if="footConfig === 'OneSwitch'" class="FootSwitchRowSingle">
-      <div class="NameInMiddle" v-bind:class="{mRotate: shouldRotateLogo}">
+      <div class="NameInMiddle" v-bind:class="{ mRotate: shouldRotateLogo }">
         <div>{{ name2 }}</div>
       </div>
-      <div v-if="nameIsAboveFootSwitches" class="NameAtBottom" v-bind:class="{mRotate: shouldRotateLogo}">
+      <div
+        v-if="nameIsAboveFootSwitches"
+        class="NameAtBottom"
+        v-bind:class="{ mRotate: shouldRotateLogo }"
+      >
         <div>{{ name1 }}</div>
       </div>
 
       <div>
         <FootSwitch
           v-bind:appearance="footSwitchStyle"
-          v-bind:label="pedalWords.switchLabels[0]"></FootSwitch>
+          v-bind:label="pedalWords.switchLabels[0]"
+        ></FootSwitch>
       </div>
 
       <div v-if="!nameIsAboveFootSwitches" class="NameAtBottom">
@@ -36,10 +40,14 @@
     </div>
 
     <div v-if="footConfig === 'MultiSwitch'">
-      <div class="NameInMiddle" v-bind:class="{mRotate: shouldRotateLogo}">
+      <div class="NameInMiddle" v-bind:class="{ mRotate: shouldRotateLogo }">
         <div>{{ name2 }}</div>
       </div>
-      <div v-if="nameIsAboveFootSwitches" class="NameAtBottom" v-bind:class="{mRotate: shouldRotateLogo}">
+      <div
+        v-if="nameIsAboveFootSwitches"
+        class="NameAtBottom"
+        v-bind:class="{ mRotate: shouldRotateLogo }"
+      >
         <div>{{ name1 }}</div>
       </div>
 
@@ -48,14 +56,14 @@
           v-for="n in numFootSwitches"
           v-bind:key="n"
           v-bind:appearance="footSwitchStyle"
-          v-bind:label="pedalWords.switchLabels[n - 1]"></FootSwitch>
+          v-bind:label="pedalWords.switchLabels[n - 1]"
+        ></FootSwitch>
       </div>
       <div v-if="!nameIsAboveFootSwitches" class="NameAtBottom">
         <div>{{ name1 }}</div>
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped>
@@ -121,33 +129,31 @@
 </style>
 
 <script>
-import FootSwitch from './FootSwitch.vue';
+import FootSwitch from "./FootSwitch.vue";
 export default {
   components: {
-    FootSwitch,
+    FootSwitch
   },
 
   props: [
-    'name1',
-    'name2',
-    'footConfig',
-    'footSwitchStyle',
-    'numFootSwitches',
-    'pedalWords',
-    'shouldRotateLogo',
-    'layoutRandomNumber',
+    "name1",
+    "name2",
+    "footConfig",
+    "footSwitchStyle",
+    "numFootSwitches",
+    "pedalWords",
+    "shouldRotateLogo",
+    "layoutRandomNumber"
   ],
 
   computed: {
     nameIsAboveFootSwitches: function() {
       return this.$props.layoutRandomNumber > 0.5;
-    },
+    }
   },
 
   setup() {
-    return {
-
-    };
-  },
-}
+    return {};
+  }
+};
 </script>

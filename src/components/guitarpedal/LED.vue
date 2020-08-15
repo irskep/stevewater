@@ -67,13 +67,13 @@ export default {
         "LEDRed",
         "LEDGreen",
         "LEDYellow",
-        "LEDBlue",
+        "LEDBlue"
       ]);
-    },
+    }
   },
 
   setup() {
     return {};
-  },
+  }
 };
 </script>

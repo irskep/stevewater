@@ -148,6 +148,6 @@ export default {
   props: ["name", "brand", "inputLabels", "outputLabels"],
   setup() {
     return {};
-  },
+  }
 };
 </script>

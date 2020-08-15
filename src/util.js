@@ -10,15 +10,14 @@ export function choiceItem(randVal, list) {
 export function star2tags(starSystem) {
   if (starSystem.stars.length == 1) {
     return [
-      ['numstars', '1'],
-      ['star1type', starSystem.stars[0].starType],
+      ["numstars", "1"],
+      ["star1type", starSystem.stars[0].starType]
     ];
-  }
-  else {
+  } else {
     return [
-      ['numstars', '2'],
-      ['star1type', starSystem.stars[0].starType],
-      ['star2type', starSystem.stars[1].starType],
+      ["numstars", "2"],
+      ["star1type", starSystem.stars[0].starType],
+      ["star2type", starSystem.stars[1].starType]
     ];
   }
 }
@@ -33,11 +32,11 @@ export function decimal(n, val) {
 
 export function shuffle(sourceArray, getRandom) {
   const array = sourceArray.slice(0);
-  for(let i = array.length - 1; i > 0; i--){
-    const j = Math.floor(getRandom() * i)
-    const temp = array[i]
-    array[i] = array[j]
-    array[j] = temp
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(getRandom() * i);
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
   }
-  return array
+  return array;
 }
